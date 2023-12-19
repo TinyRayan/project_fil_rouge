@@ -1,18 +1,70 @@
+/*-----------TOUTE LA PAGE---------------*/
+
 *{
     margin: 0;
     padding: 0;
-
 }
+
+
+/*Navigation*/
+
+.navbar-brand{
+    width: 100px;
+    height: 100px;
+}
+
+.container-fluid{
+  background-color: rgb(63, 56, 56);
+}
+
+.navbar-toggler-icon{
+  background-color: white;
+  border-radius: 20%;
+}
+
 
 .nav-link{
-    text-align: center;
+  color: white;
 }
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 125px;
+
+.active{
+  color: blueviolet;
+}
+
+/*Parallax et barre de recherche*/
+
+.parallax-effect {
+    background-image: url("images_the_district/parallax.jpg");
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  overflow: hidden;
+    
+  }
+  
+.search-container {
+    position: relative;
+    height: 100px; /* 100% de la hauteur de la vue */
+  }
+  
+.background-image {
     width: 100%;
-    background-color: black;
-    color: #fff;
-}
+    height: 100%;
+    object-fit: cover; /* Ajuster l'image à la hauteur de la vue tout en conservant les proportions */
+  }
+  
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff; /* Couleur du texte, ajustez selon vos besoins */
+  }
+  
+.form-control {
+    width: 300px; /* Largeur de la barre de recherche */
+  }
