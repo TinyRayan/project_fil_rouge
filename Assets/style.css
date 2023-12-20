@@ -35,7 +35,7 @@
 
 .parallax-effect {
     background-image: url("images_the_district/parallax.jpg");
-    min-height: 600px;
+    min-height: 10000px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,6 +48,7 @@
 .search-container {
     position: relative;
     height: 100px; /* 100% de la hauteur de la vue */
+    
   }
   
 .background-image {
@@ -68,3 +69,32 @@
 .form-control {
     width: 300px; /* Largeur de la barre de recherche */
   }
+
+  .all-Accueil{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-accueil img{
+    
+    border-radius: 20%;
+
+
+}
+
+.card{
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+
+
+
+
+
+    
+  
