@@ -78,13 +78,22 @@
 
 .row{
   margin: 2rem;
+  display: flex;
   
 }
 
 .btn{
   background-color: blueviolet;
+
 }
 
 form{
   margin: auto;
 }
+
+.mb-3{
+  font-size: 1.5rem;
+  color: blue;
+  margin: 5rem;
+}
+
