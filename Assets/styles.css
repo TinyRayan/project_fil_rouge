@@ -6,28 +6,28 @@
 }
 
 
-                                                                /*----------------Navigation----------------*/
-
-
-
 .container-fluid{
-  background-color: rgb(63, 56, 56);
-}
+  background-color: grey;
+}                                      /*----------------Navigation----------------*/
 
-.navbar-toggler-icon{
-  background-color: white;
-  border-radius: 20%;
+ul{
+  display: flex;
+  align-items: center;
 }
-
 
 .nav-link{
-  color: white;
-  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  
 }
 
+.nav-item{
+  font-size: large;
+  justify-content: center;
+  
+}
 
-
-                                                        /*---------------Parallax et barre de recherche----------------------*/
+/*---------------Parallax et barre de recherche----------------------*/
 
 .parallax-effect {
     background-image: url("images_the_district/parallax.jpg");
@@ -39,36 +39,62 @@
   overflow: hidden;
     
   }
-  
-.search-container {
+
+  .search-container {
     position: relative;
-    height: 5rem; /* 100% de la hauteur de la vue */
+    height: 4rem; /* 100% de la hauteur de la vue */
     
   }
-
-  
-.search-bar {
+  .search-bar {
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
   }
-  
-.form-control {
-    width: 50rem;
-  }
+
+  .form-control {
+    width: 20rem;
+  }                                                     /*----------------------Code Main---------------------------*/
 
 
-                                                        /*----------------------Code Main---------------------------*/
-
+.row{
+  display: flex;
+  justify-content: center;
+  padding: 0%;
+  margin: 1%;
+}
 
 
 .card{
+  padding: 0%;
   margin: auto;
-  margin-bottom: 2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bas_page{
   margin: 3rem;
@@ -76,24 +102,12 @@
 
 }
 
-.row{
-  margin: 2rem;
-  display: flex;
-  
-}
+
 
 .btn{
   background-color: blueviolet;
+  
 
 }
 
-form{
-  margin: auto;
-}
-
-.mb-3{
-  font-size: 1.5rem;
-  color: blue;
-  margin: 5rem;
-}
 

@@ -1,108 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
- 
-  <link rel="stylesheet" href="Assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/styles.css">
 </head>
 <body>
 <div class="parallax-effect">
 
   <!--Navigation-->
-  <header>
-    <nav class="navbar navbar-expand-sm bg-body-tertiary">
-        <div class="container-fluid">
-          <img src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="logo" class="col-2">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-around col-12 " id="navbarNav">
-            <ul class="navbar-nav col-12 ">
-              <li class="nav-item col-3 ">
-                <a class="nav-link" aria-current="page" href="#">Accueil</a>
-              </li>
-              <li class="nav-item col-3">
-                <a class="nav-link" href="Catégories.html">Catégorie</a>
-              </li>
-              <li class="nav-item col-3 ">
-                <a class="nav-link" href="allPlats.html">Plats</a>
-              </li>
-              <li class="nav-item col-3 ">
-                <a class="nav-link"href="Contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <header>
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+          <div class="container-fluid">
+            <img src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="logo" class="col-2">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                  <div class="collapse navbar-collapse justify-content-around col-12 " id="navbarNav">
+                    <ul class="navbar-nav col-12">
+                      
+                      <li class="nav-item col-2 ">
+                      <a class="nav-link" aria-current="page" href="#">Accueil</a>
+                      </li>
+
+                      <li class="nav-item col-2">
+                      <a class="nav-link" href="Catégories.html">Catégorie</a>
+                      </li>
+              
+                      <li class="nav-item col-2 ">
+                      <a class="nav-link" href="allPlats.html">Plats</a>
+                      </li>
+                      
+                      <li class="nav-item col-2 ">
+                      <a class="nav-link"href="Contact.html">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
       </nav>
-</header>
+      </header>
   <!--Parallax & barre de recherche-->
   
   
   
-  <div class="search-container">
-    <div class="search-bar">
-      <form class="form-inline">
-        <input class="form-control" type="search" placeholder="Recherche" aria-label="Recherche">
-      </form>
-      
-    </div>
-    
+<div class="search-container col-12">
+  <div class="search-bar">
+    <form class="form-inline">
+      <input class="form-control" type="search" placeholder="Recherche" aria-label="Recherche">
+    </form>
   </div>
+</div>
   
   <!--Catégories-->
 
-<div class="all-Accueil">
-  <div class="row">
-    
-        <div class="card col-12 col-sm-2 ">
-            <img src="Assets/images_the_district/category/pizza_cat.jpg" class="card-img-top" alt="pizza_cat">
-        </div>
-    
-        <div class="card col-12 col-sm-2 " >
-            <img src="Assets/images_the_district/category/pasta_cat.jpg" class="card-img-top" alt="pasta_cat">
-        </div>
-    
-        <div class="card col-12 col-sm-2">
-            <img src="Assets/images_the_district/category/burger_cat.jpg" class="card-img-top" alt="burger_cat">
-        </div>
-    
-  </div>
+  <div class="all-Accueil">
+    <div class="row ">
 
-  <div class="row">
-        <div class="card col-12 col-sm-2 ">
-            <img src="Assets/images_the_district/category/sandwich_cat.jpg" class="card-img-top" alt="pizza_cat">
-        </div>
-  
-        <div class="card col-12 col-sm-2 ">
-            <img src="Assets/images_the_district/category/wrap_cat.jpg" class="card-img-top" alt="pizza_cat">
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/category/pizza_cat.jpg" class="card-img-top" alt="pizza_cat">
         </div>
 
-        <div class="card col-12 col-sm-2 ">
-            <img src="Assets/images_the_district/category/asian_food_cat.jpg" class="card-img-top" alt="pizza_cat">
-        </div>
-  
-  </div>
-
-  <div class="row">
-        <div class="card col-12 col-sm-2 ">
-            <img src="Assets/images_the_district/food/cesar_salad.jpg" class="card-img-top" alt="pizza_cat">
-        </div>
-  
-        <div class="card col-12 col-sm-2 ">
-            <img src="Assets/images_the_district/food/Food-Name-3461.jpg" class="card-img-top" alt="pizza_cat">
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/category/pasta_cat.jpg" class="card-img-top" alt="pasta_cat">
         </div>
 
-        <div class="card col-12 col-sm-2 ">
-            <img src="Assets/images_the_district/food/courgettes_farcies.jpg" class="card-img-top" alt="pizza_cat">
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/category/burger_cat.jpg" class="card-img-top" alt="burger_cat">
         </div>
-  
-  </div>
 
+    </div>
+
+    <div class="row">
+
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/category/sandwich_cat.jpg" class="card-img-top" alt="pizza_cat">
+        </div>
+
+        <div class="card col-12 col-sm-6 col-md-3 h-100">
+            <img  src="Assets/images_the_district/category/wrap_cat.jpg" class="card-img-top" alt="pizza_cat">
+        </div>
+
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/category/asian_food_cat.jpg" class="card-img-top" alt="pizza_cat">
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/food/cesar_salad.jpg" class="card-img-top" alt="pizza_cat">
+        </div>
+
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/food/Food-Name-3461.jpg" class="card-img-top" alt="pizza_cat">
+        </div>
+
+        <div class="card col-12 col-sm-6 col-md-3 h-100 img-fluid">
+            <img  src="Assets/images_the_district/food/courgettes_farcies.jpg" class="card-img-top" alt="pizza_cat">
+        </div>
+
+    </div>
 </div>
+
+
+
 
 <footer class="bas_page ">
   
@@ -117,17 +122,15 @@
   <div class="card col-1 ">
       <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="pizza_cat">
    
-    </div>
+  </div>
 
  
 </footer>
 
-
-
-
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+</script>
 <script src="JavaScript.js"></script>
 </body>
 </html>
