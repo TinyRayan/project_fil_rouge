@@ -1,17 +1,9 @@
-                                                                /*-----------TOUTE LA PAGE---------------*/
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
+                           /*----------------Navigation----------------*/
 
 .container-fluid{
   background-color: grey;
-  
-}                                      /*----------------Navigation----------------*/
-
-
+ 
+}     
 
 ul{
   display: flex;
@@ -20,8 +12,7 @@ ul{
 
 .nav-link{
   display: flex;
-  justify-content: center;
-  
+  justify-content: center;  
 }
 
 .nav-item{
@@ -62,12 +53,6 @@ ul{
   }                                                     /*----------------------Code Main---------------------------*/
 
 
-.row{
-  display: flex;
-  justify-content: center;
-  padding: 0%;
-  margin: auto;
-}
 
 
 .card{
@@ -82,7 +67,7 @@ ul{
 
 .bas_page{
   margin: 3rem;
-  display: flex;
+  
 
 }
 
