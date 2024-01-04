@@ -1,7 +1,7 @@
                            /*----------------Navigation----------------*/
 
 .container-fluid{
-  background-color: grey;
+  background-color: rgb(29, 26, 26);
  
 }     
 
@@ -11,8 +11,10 @@ ul{
 }
 
 .nav-link{
+  color: rgb(230, 148, 27);
   display: flex;
   justify-content: center;  
+
 }
 
 .nav-item{
@@ -21,6 +23,11 @@ ul{
   
 }
 
+
+h1{
+  color: rgb(230, 148, 27);
+
+}
 /*---------------Parallax et barre de recherche----------------------*/
 
 .parallax-effect {
