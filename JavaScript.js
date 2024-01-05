@@ -1,6 +1,9 @@
+//-------------------------------------------Verif contact form-------------------------//
+
+
 $(document).ready(function () {
     // Validation du formulaire lors de la soumission
-    $("form").submit(function (event) {
+    $(".formcontact").submit(function (event) {
         // Supprimer les messages d'erreur précédents
         $(".error-message").empty();
 
@@ -73,3 +76,52 @@ $(document).ready(function () {
         return phonePattern.test(phoneNumber);
     }
 });
+
+
+//------------------------------------verif commande form---------------------------//
+
+
+
+$(document).ready(function() {
+    $(".formcommande").submit(function(event) {
+      // Empêcher le comportement par défaut du formulaire (rechargement de la page)
+      event.preventDefault();
+
+      // Vos validations ici
+      var nom = $("#nomcommande").val();
+      var prenom = $("#Prenomcommande").val();
+      var adresse = $("#adressecommande").val();
+      var telephone = $("#telcommande").val();
+
+      // Exemple de validation simple (non vide)
+      if (nom === "") {
+        displayError($("#nomcommande"), "Veuillez entrer votre nom.");
+        return;
+      }
+
+      if (prenom === "") {
+        displayError($("#Prenomcommande"), "Veuillez entrer votre prénom.");
+        return;
+      }
+
+      if (adresse === "") {
+        displayError($("#adressecommande"), "Veuillez entrer votre adresse.");
+        return;
+      }
+
+      if (telephone === "") {
+        displayError($("#telcommande"), "Veuillez entrer votre numéro de téléphone.");
+        return;
+      }
+
+      // Si toutes les validations passent, vous pouvez soumettre le formulaire
+      alert("Formulaire validé avec succès!");
+      // Vous pouvez également utiliser $(this).submit(); pour soumettre le formulaire réellement
+    });
+
+    function displayError(element, message) {
+      // Afficher le message d'erreur sous le champ avec la classe alert-warning
+      var errorDiv = $("<div>").addClass("alert alert-warning").text(message);
+      element.closest(".mb-3").append(errorDiv);
+    }
+  });
