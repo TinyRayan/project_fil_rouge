@@ -1,8 +1,8 @@
-                           /*----------------Navigation----------------*/
+                           /* ----------------Navigation---------------- */
 
 .container-fluid{
   background-color: rgb(29, 26, 26);
- 
+  margin: auto;
 }     
 
 ul{
@@ -59,14 +59,14 @@ h1{
     width: 20rem;
   }                                                     /*----------------------Code Main---------------------------*/
 
-
+/*effet sur image*/
   .image-hover-effect {
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+    transition: transform 0.3s ease-in-out; 
   }
   
   .image-hover-effect:hover {
-    transform: scale(1.1); /* Increase the size of the image on hover */
-    /* Add additional styles or effects as needed */
+    transform: scale(1.1); 
+   
   }
 
 
@@ -118,3 +118,6 @@ form{
 }
 
 
+.card-img-top{
+  border-radius: 100px;
+}

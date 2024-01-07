@@ -12,101 +12,107 @@
 <div class="parallax-effect">
 
         <!--Navigation-->
-      <header>
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
-          <div class="container-fluid">
-            <img src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="logo" class="col-2">
+
+        <header>
+          <nav class="navbar navbar-expand-sm bg-body-tertiary p-0 ">
+            <div class="container-fluid">
+              <img src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="logo" class="col-2">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-                  <div class="collapse navbar-collapse justify-content-around col-12 " id="navbarNav">
-                  <ul class="navbar-nav col-12 col-sm-10 align-content-around">
-                    
-                    <li class="nav-item col-2 ">
+              <div class="collapse navbar-collapse justify-content-around col-12 " id="navbarNav">
+                <ul class="navbar-nav col-12 col-sm-10 align-content-around">
+                  <li class="nav-item col-2 ">
                     <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
-                    </li>
-                    
-                    <li class="nav-item col-2">
-                    <a class="nav-link" href="Catégories.html">Catégorie</a>
-                    </li>
-                    
-                    <li class="nav-item col-2 ">
-                    <a class="nav-link" href="allPlats.html">Plats</a>
-                    </li>
-                    
-                    <li class="nav-item col-2 ">
+                  </li>
+
+                  <li class="nav-item col-2">
+                    <a class="nav-link" href="categorie.html">Catégorie</a>
+                  </li>  
+
+                  <li class="nav-item col-2 ">
+                    <a class="nav-link" href="plats.html">Plats</a>
+                  </li>
+
+                  <li class="nav-item col-2 ">
                     <a class="nav-link"href="#">Contact</a>
-                    </li>
-                  </ul>
-                  </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <h1 class="d-flex justify-content-center m-2">Contact</h1>
+      <form class="mt-4 formcontact" action="#" method="post" id="myForm">
+        <div class="d-md-flex m-sm-5">
+          <div class="mb-3 m-5">
+            <label for="Nom" class="form-label">Nom :</label>
+            <input type="text" class="form-control" id="Nom">
+            <div class="alert alert-warning d-none" id="nomAlert1" role="alert">
+              Veuillez entrer un nom valide.
+            </div>
           </div>
-        </nav>
-      </header>
-
-      <h1 class="d-flex justify-content-center m-2">Contact</h1>
-
-      <form class="mt-4 formcontact" action="#" method="post">
-        <div class=" d-md-flex m-sm-5">
-        <div class="mb-3 m-5">
-          <label for="Nom" class="form-label">Nom :</label>
-          <input type="text" class="form-control" id="Nom">
-          <div style="color: red;" id="erreurnom" class="error-message"></div>
+      
+          <div class="mb-3 m-5">
+            <label for="Prenom" class="form-label">Prenom :</label>
+            <input type="text" class="form-control" id="Prenom">
+            <div class="alert alert-warning d-none" id="prenomAlert1" role="alert">
+              Veuillez entrer un prénom valide.
+            </div>
+          </div>
         </div>
-        <div class="mb-3 m-5">
-          <label for="Prenom" class="form-label">Prenom :</label>
-          <input type="text" class="form-control" id="Prenom">
-          <div style="color: red;" id="erreurPrenom" class="error-message"></div>
+      
+        <div class="d-md-flex m-sm-5">
+          <div class="mb-3 m-5 ">
+            <label for="Email" class="form-label">Email :</label>
+            <input type="email" class="form-control" id="Email">
+            <div class="alert alert-warning d-none " id="emailAlert1" role="alert">
+              Veuillez entrer un email valide (xyz@gmail.com).
+            </div>
+          </div>
+      
+          <div class="mb-3 m-5 ">
+            <label for="Tel" class="form-label">Téléphone :</label>
+            <input type="text" class="form-control" id="Tel">
+            <div class="alert alert-warning d-none" id="telError1" role="alert">
+              Veuillez entrer un numéro valide (10 chiffres).
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="d-md-flex m-sm-5">
-        <div class="mb-3 m-5 ">
-          <label for="Email" class="form-label">Email :</label>
-          <input type="email" class="form-control" id="Email">
-          <div style="color: red;" id="erreurEmail" class="error-message"></div>
-
+      
+        <div class="input-group justify-content-center mb-3 mt-5">
+          <label for="demande">Votre Demande
+            <textarea class="form-control" aria-label="With textarea" id="demande"></textarea>
+            <div class="alert alert-warning d-none" id="demandeError1" role="alert">
+              Veuillez entrer votre demande.
+            </div>
+          </label>
         </div>
-        <div class="mb-3 m-5 ">
-          <label for="Tel" class="form-label">Téléphone :</label>
-          <input type="text" class="form-control" id="Tel">
-          <div style="color: red;" id="erreurTel" class="error-message"></div>
-
-        </div>
-      </div>
-      <div class="input-group justify-content-center mb-3 mt-5">
-        <label for="text">votre Demande
-        <textarea class="form-control" aria-label="With textarea"></textarea>
-        </label>
-        <div style="color: red;" id="erreurtext" class="error-message"></div>
-
-      </div>
-        <button type="submit" class="btn btn-primary ">Envoyer</button>
-      </form>
         
+        <button type="submit" class="btn btn-primary" id="submitButton">Envoyer</button>
+      </form>
+      <footer class="container  row d-flex justify-content-around mx-auto mt-5 ">
+        <div class="col-2 col-sm-1">
+          <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="icon_reseaux">
+        </div>
 
-   
-<footer class="container  row d-flex justify-content-around mx-auto mt-5 ">
-  
-  <div class="col-2 col-sm-1">
-      <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="pizza_cat">
-  </div>
+        <div class="col-2 col-sm-1">
+          <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="icon_reseaux">
+        </div>
 
-  <div class="col-2 col-sm-1">
-      <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="pizza_cat">
-  </div>
-
-  <div class="col-2 col-sm-1">
-      <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="pizza_cat">
-   
-  </div>
-
- 
-</footer>
-
-
+        <div class="col-2 col-sm-1">
+          <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="icon_reseaux">
+        </div>
+      </footer>
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="JavaScript.js"></script>
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="JavaScript.js"></script>
+
+  </body>
+
+  </html>
