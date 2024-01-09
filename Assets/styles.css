@@ -43,7 +43,7 @@ h1{
 
   .search-container {
     position: relative;
-    height: 4rem; /* 100% de la hauteur de la vue */
+    height: 15rem; /* 100% de la hauteur de la vue */
     
   }
   .search-bar {
@@ -89,6 +89,10 @@ h1{
 }
 
 
+.img-thumbnail {
+  background-color: rgb(75, 60, 60);
+}
+
 
 .btn{
   background-color: blueviolet;
@@ -121,3 +125,6 @@ form{
 .card-img-top{
   border-radius: 100px;
 }
+
+
+

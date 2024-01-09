@@ -96,7 +96,52 @@ $(document).ready(function () {
 });
 
 
-//------------------------------------------------
+//------------------------------------------------ json --------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Charger le fichier JSON avec une requête AJAX
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "data.json", true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Analyser la réponse JSON
+            var jsonData = JSON.parse(xhr.responseText);
+
+            // Utiliser les données dans le HTML
+            displayData(jsonData);
+        }
+    };
+
+    xhr.send();
+
+    // Fonction pour afficher les données dans le HTML
+    function displayData(data) {
+        var contentDiv = document.getElementById("testajax");
+
+        // Ajouter l'image
+        var imageElement = document.createElement("img");
+        imageElement.src = data.image;
+        contentDiv.appendChild(imageElement);
+
+        // Ajouter la description
+        var descriptionElement = document.createElement("p");
+        descriptionElement.textContent = data.description;
+        contentDiv.appendChild(descriptionElement);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
