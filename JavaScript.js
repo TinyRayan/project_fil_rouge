@@ -98,50 +98,116 @@ $(document).ready(function () {
 
 //------------------------------------------------ json --------------------------
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Charger le fichier JSON avec une requête AJAX
+//   var xhr = new XMLHttpRequest();
+
+//   xhr.open("GET", "data.json", true);
+
+//   xhr.onreadystatechange = function () {
+//       if (xhr.readyState == 4 && xhr.status == 200) {
+//           // Analyser la réponse JSON
+//           var jsonData = JSON.parse(xhr.responseText);
+
+//           // Utiliser les données dans le HTML
+//           displayData(jsonData);
+//       }
+//   };
+
+//   xhr.send();
+
+//   // Fonction pour afficher les données dans le HTML
+//   function displayData(data) {
+//       var contentDiv = document.getElementById("content");
+
+//       // Ajouter l'image
+//       var imageElement = document.createElement("img");
+//       imageElement.src = data.image;
+//       contentDiv.appendChild(imageElement);
+
+//       // Ajouter la description
+//       var descriptionElement = document.createElement("p");
+//       descriptionElement.textContent = data.description;
+//       contentDiv.appendChild(descriptionElement);
+//   }
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Charger le fichier JSON avec une requête AJAX
+//   var xhr = new XMLHttpRequest();
+
+//   xhr.open("GET", "data.json", true);
+
+//   xhr.onreadystatechange = function () {
+//       if (xhr.readyState == 4 && xhr.status == 200) {
+//           // Analyser la réponse JSON
+//           var jsonData = JSON.parse(xhr.responseText);
+
+//           // Utiliser les données dans le HTML
+//           displayImages(jsonData.categorie); // Utilise les images des catégories
+//           // displayImages(jsonData.plat);      // Utilise les images des plats
+//       }
+//   };
+
+//   xhr.send();
+
+//   // Fonction pour afficher les images dans le HTML
+//   function displayImages(imagesData) {
+//       var imageContainer = document.getElementById("imagetest");
+
+//       // Parcourir chaque image dans le tableau
+//       imagesData.forEach(function (imageData) {
+//           // Créer un élément image
+//           var imageElement = new Image();
+
+//           // Définir la source de l'image
+//           imageElement.src = imageData.image;
+//           imageElement.alt = "Image avec ID : " + imageData.id_categorie; // ou imageData.id_plat
+
+//           // Ajouter l'image au conteneur
+//           imageContainer.appendChild(imageElement);
+//       });
+//   }
+// });
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Charger le fichier JSON avec une requête AJAX
-    var xhr = new XMLHttpRequest();
+  // Charger le fichier JSON avec une requête AJAX
+  var xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "data.json", true);
+  xhr.open("GET", "data.json", true);
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // Analyser la réponse JSON
-            var jsonData = JSON.parse(xhr.responseText);
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+          // Analyser la réponse JSON
+          var jsonData = JSON.parse(xhr.responseText);
 
-            // Utiliser les données dans le HTML
-            displayData(jsonData);
-        }
-    };
+          // Utiliser les données dans le HTML
+          displayCategoryImages(jsonData.categorie); // Utilise les images des catégories
+      }
+  };
 
-    xhr.send();
+  xhr.send();
 
-    // Fonction pour afficher les données dans le HTML
-    function displayData(data) {
-        var contentDiv = document.getElementById("testajax");
+  // Fonction pour afficher une seule image par div
+  function displayCategoryImages(categoryData) {
+      var imageContainer = document.getElementById('imagetest');
 
-        // Ajouter l'image
-        var imageElement = document.createElement("img");
-        imageElement.src = data.image;
-        contentDiv.appendChild(imageElement);
+      // Parcourir chaque catégorie dans le tableau
+      categoryData.forEach(function (category) {
+          // Créer une div pour chaque catégorie
+          var categoryDiv = document.createElement('div');
 
-        // Ajouter la description
-        var descriptionElement = document.createElement("p");
-        descriptionElement.textContent = data.description;
-        contentDiv.appendChild(descriptionElement);
-    }
+          // Créer un élément image pour la catégorie
+          var categoryImage = new Image();
+          categoryImage.src = category.image;
+          categoryImage.alt = category.libelle;
+
+          // Ajouter l'image à la div de catégorie
+          categoryDiv.appendChild(categoryImage);
+
+          // Ajouter la div de catégorie au conteneur principal
+          imageContainer.appendChild(categoryDiv);
+      });
+  }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-

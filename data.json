@@ -3,49 +3,49 @@
      {
       "id_categorie": 4,
       "libelle": "Pizza",
-      "image": "pizza_cat.jpg",
+      "image": "Assets/images_the_district/category/pizza_cat.jpg",
       "active": "Yes"
      },
      {
       "id_categorie": 5,
       "libelle": "Burger",
-      "image": "burger_cat.jpg",
+      "image": "Assets/images_the_district/category/burger_cat.jpg",
       "active": "Yes"
      },
      {
       "id_categorie": 9,
       "libelle": "Wraps",
-      "image": "wrap_cat.jpg",
+      "image": "Assets/images_the_district/category/wrap_cat.jpg",
       "active": "Yes"
      },
      {
       "id_categorie": 10,
       "libelle": "Pasta",
-      "image": "pasta_cat.jpg",
+      "image": "Assets/images_the_district/category/pasta_cat.jpg",
       "active": "Yes"
      },
      {
       "id_categorie": 11,
       "libelle": "Sandwich",
-      "image": "sandwich_cat.jpg",
+      "image": "Assets/images_the_district/category/sandwich_cat.jpg",
       "active": "Yes"
      },
      {
       "id_categorie": 12,
       "libelle": "Asian Food",
-      "image": "asian_food_cat.jpg",
+      "image": "Assets/images_the_district/category/asian_food_cat.jpg",
       "active": "No"
      },
      {
       "id_categorie": 13,
       "libelle": "Salade",
-      "image": "salade_cat.jpg",
+      "image": "Assets/images_the_district/category/salade_cat.jpg",
       "active": "YES"
      },
      {
       "id_categorie": 14,
       "libelle": "Veggie",
-      "image": "veggie_cat.jpg",
+      "image": "Assets/images_the_district/category/veggie_cat.jpg",
       "active": "Yes"
      }
     ],
@@ -140,5 +140,9 @@
       "id_categorie": 10,
       "active": "Yes"
      }
+   
+   
     ]
     }
+
+
