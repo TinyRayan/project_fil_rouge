@@ -171,43 +171,84 @@ $(document).ready(function () {
 // });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Charger le fichier JSON avec une requête AJAX
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Charger le fichier JSON avec une requête AJAX
+//   var xhr = new XMLHttpRequest();
+
+//   xhr.open("GET", "data.json", true);
+
+//   xhr.onreadystatechange = function () {
+//       if (xhr.readyState == 4 && xhr.status == 200) {
+//           // Analyser la réponse JSON
+//           var jsonData = JSON.parse(xhr.responseText);
+
+//           // Utiliser les données dans le HTML
+//           displayCategoryImages(jsonData.categorie); // Utilise les images des catégories
+//       }
+//   };
+
+//   xhr.send();
+
+//   // Fonction pour afficher une seule image par div
+//   function displayCategoryImages(categoryData) {
+//       var imageContainer = document.getElementById('imagetest');
+
+//       // Parcourir chaque catégorie dans le tableau
+//       categoryData.forEach(function (category) {
+//           // Créer une div pour chaque catégorie
+//           var categoryDiv = document.createElement('div');
+
+//           // Créer un élément image pour la catégorie
+//           var categoryImage = new Image();
+//           categoryImage.src = category.image;
+//           categoryImage.alt = category.libelle;
+
+//           // Ajouter l'image à la div de catégorie
+//           categoryDiv.appendChild(categoryImage);
+
+//           // Ajouter la div de catégorie au conteneur principal
+//           imageContainer.appendChild(categoryDiv);
+//       });
+//   }
+// });
+document.getElementById("btnLoadData").addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
-
   xhr.open("GET", "data.json", true);
-
-  xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-          // Analyser la réponse JSON
-          var jsonData = JSON.parse(xhr.responseText);
-
-          // Utiliser les données dans le HTML
-          displayCategoryImages(jsonData.categorie); // Utilise les images des catégories
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4) {
+          if (xhr.status == 200) {
+              var jsonData = JSON.parse(xhr.responseText);
+              displayData(jsonData, 1); // Spécifiez l'ID souhaité ici (par exemple, 1)
+          } else {
+              console.error("Erreur de requête: " + xhr.status);
+          }
       }
   };
-
   xhr.send();
-
-  // Fonction pour afficher une seule image par div
-  function displayCategoryImages(categoryData) {
-      var imageContainer = document.getElementById('imagetest');
-
-      // Parcourir chaque catégorie dans le tableau
-      categoryData.forEach(function (category) {
-          // Créer une div pour chaque catégorie
-          var categoryDiv = document.createElement('div');
-
-          // Créer un élément image pour la catégorie
-          var categoryImage = new Image();
-          categoryImage.src = category.image;
-          categoryImage.alt = category.libelle;
-
-          // Ajouter l'image à la div de catégorie
-          categoryDiv.appendChild(categoryImage);
-
-          // Ajouter la div de catégorie au conteneur principal
-          imageContainer.appendChild(categoryDiv);
-      });
-  }
 });
+
+function displayData(data, targetId) {
+  var dataContainer = document.getElementById("dataContainer");
+  
+  // Efface le contenu précédent
+  dataContainer.innerHTML = "";
+
+  // Recherche l'objet avec l'ID spécifié
+  var selectedItem = data.find(function(item) {
+      return item.id === targetId;
+  });
+
+  if (selectedItem) {
+      // Affiche les informations pour l'objet trouvé
+      var itemDiv = document.createElement("div");
+      itemDiv.innerHTML = "<p>ID: " + selectedItem.id + "</p>" +
+                          "<p>Nom: " + selectedItem.nom + "</p>" +
+                          "<p>Age: " + selectedItem.age + "</p>" +
+                          "<p>Ville: " + selectedItem.ville + "</p>" +
+                          "<img src='" + selectedItem.image + "' alt='Image de profil'>";
+      dataContainer.appendChild(itemDiv);
+  } else {
+      // Aucun objet trouvé avec l'ID spécifié
+      dataContainer.innerHTML = "<p>Aucune donnée trouvée pour l'ID " + targetId + "</p>";
+  }
+}
