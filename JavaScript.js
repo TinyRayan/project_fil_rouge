@@ -98,157 +98,156 @@ $(document).ready(function () {
 
 //------------------------------------------------ json --------------------------
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Charger le fichier JSON avec une requête AJAX
-//   var xhr = new XMLHttpRequest();
-
-//   xhr.open("GET", "data.json", true);
-
-//   xhr.onreadystatechange = function () {
-//       if (xhr.readyState == 4 && xhr.status == 200) {
-//           // Analyser la réponse JSON
-//           var jsonData = JSON.parse(xhr.responseText);
-
-//           // Utiliser les données dans le HTML
-//           displayData(jsonData);
-//       }
-//   };
-
-//   xhr.send();
-
-//   // Fonction pour afficher les données dans le HTML
-//   function displayData(data) {
-//       var contentDiv = document.getElementById("content");
-
-//       // Ajouter l'image
-//       var imageElement = document.createElement("img");
-//       imageElement.src = data.image;
-//       contentDiv.appendChild(imageElement);
-
-//       // Ajouter la description
-//       var descriptionElement = document.createElement("p");
-//       descriptionElement.textContent = data.description;
-//       contentDiv.appendChild(descriptionElement);
-//   }
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Charger le fichier JSON avec une requête AJAX
-//   var xhr = new XMLHttpRequest();
-
-//   xhr.open("GET", "data.json", true);
-
-//   xhr.onreadystatechange = function () {
-//       if (xhr.readyState == 4 && xhr.status == 200) {
-//           // Analyser la réponse JSON
-//           var jsonData = JSON.parse(xhr.responseText);
-
-//           // Utiliser les données dans le HTML
-//           displayImages(jsonData.categorie); // Utilise les images des catégories
-//           // displayImages(jsonData.plat);      // Utilise les images des plats
-//       }
-//   };
-
-//   xhr.send();
-
-//   // Fonction pour afficher les images dans le HTML
-//   function displayImages(imagesData) {
-//       var imageContainer = document.getElementById("imagetest");
-
-//       // Parcourir chaque image dans le tableau
-//       imagesData.forEach(function (imageData) {
-//           // Créer un élément image
-//           var imageElement = new Image();
-
-//           // Définir la source de l'image
-//           imageElement.src = imageData.image;
-//           imageElement.alt = "Image avec ID : " + imageData.id_categorie; // ou imageData.id_plat
-
-//           // Ajouter l'image au conteneur
-//           imageContainer.appendChild(imageElement);
-//       });
-//   }
-// });
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Charger le fichier JSON avec une requête AJAX
-//   var xhr = new XMLHttpRequest();
 
-//   xhr.open("GET", "data.json", true);
+$(document).ready(function () {
+  var nombreCategoriesAffichees = 7; // Spécifiez le nombre de catégories que vous souhaitez afficher
+  var nombrePlatsAffiches = 3; // Spécifiez le nombre de plats que vous souhaitez afficher
 
-//   xhr.onreadystatechange = function () {
-//       if (xhr.readyState == 4 && xhr.status == 200) {
-//           // Analyser la réponse JSON
-//           var jsonData = JSON.parse(xhr.responseText);
+  // Utiliser Ajax pour charger les données à partir du fichier JSON
+  $.ajax({
+      url: 'data.json', // Assurez-vous de spécifier le bon chemin vers votre fichier JSON
+      dataType: 'json',
+      success: function (data) {
+          // Récupérer l'élément du conteneur des catégories
+          var categoriesContainer = $('#categories-container');
 
-//           // Utiliser les données dans le HTML
-//           displayCategoryImages(jsonData.categorie); // Utilise les images des catégories
-//       }
-//   };
+          // Récupérer l'élément du conteneur des plats
+          var platsContainer = $('#plats-container');
 
-//   xhr.send();
+          // Parcourir les données et créer des cartes pour chaque catégorie
+          $.each(data.categorie, function (index, categorie) {
+              if (categorie.active.toLowerCase() === 'yes' && index < nombreCategoriesAffichees) {
+                  var categoryCard = $('<a href="commande.html" class="image-container col-lg-4 col-md-6 col-sm-10 mx-auto mb-4 d-block image-hover-effect"></a>');
 
-//   // Fonction pour afficher une seule image par div
-//   function displayCategoryImages(categoryData) {
-//       var imageContainer = document.getElementById('imagetest');
+                  // Ajouter l'image de la catégorie à l'élément categoryCard avec la classe img-fluid
+                  categoryCard.html(`
+                      <img src="${categorie.image}" alt="${categorie.libelle}" class="w-100 img-thumbnail">
+                      <div class="category-info">
+                          <h2 class="image-text">${categorie.libelle}</h2>
+                      </div>
+                  `);
 
-//       // Parcourir chaque catégorie dans le tableau
-//       categoryData.forEach(function (category) {
-//           // Créer une div pour chaque catégorie
-//           var categoryDiv = document.createElement('div');
+                  // Ajouter l'élément categoryCard au conteneur des catégories
+                  categoriesContainer.append(categoryCard);
+              }
+          });
 
-//           // Créer un élément image pour la catégorie
-//           var categoryImage = new Image();
-//           categoryImage.src = category.image;
-//           categoryImage.alt = category.libelle;
+          // Parcourir les données et créer des cartes pour chaque plat
+          $.each(data.plat, function (index, plat) {
+              if (plat.active.toLowerCase() === 'yes' && index < nombrePlatsAffiches) {
+                  var platCard = $('<a href="commande.html" class="image-container col-lg-4 col-md-6 col-sm-8 mx-auto mb-4 d-block image-hover-effect"></a>');
 
-//           // Ajouter l'image à la div de catégorie
-//           categoryDiv.appendChild(categoryImage);
+                  // Ajouter l'image du plat à l'élément platCard avec la classe img-fluid
+                  platCard.html(`
+                      <img src="${plat.image}" alt="${plat.libelle}" class="img-thumbnail">
+                      <div class="category-info">
+                          <h2 class="image-text">${plat.libelle}</h2>
+                      </div>
+                  `);
 
-//           // Ajouter la div de catégorie au conteneur principal
-//           imageContainer.appendChild(categoryDiv);
-//       });
-//   }
-// });
-document.getElementById("btnLoadData").addEventListener("click", function() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "data.json", true);
-  xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4) {
-          if (xhr.status == 200) {
-              var jsonData = JSON.parse(xhr.responseText);
-              displayData(jsonData, 1); // Spécifiez l'ID souhaité ici (par exemple, 1)
-          } else {
-              console.error("Erreur de requête: " + xhr.status);
-          }
+                  // Ajouter l'élément platCard au conteneur des plats
+                  platsContainer.append(platCard);
+              }
+          });
+      },
+      error: function (error) {
+          console.log('Erreur lors du chargement des données JSON');
+          console.log(error);
       }
-  };
-  xhr.send();
+  });
 });
 
-function displayData(data, targetId) {
-  var dataContainer = document.getElementById("dataContainer");
-  
-  // Efface le contenu précédent
-  dataContainer.innerHTML = "";
 
-  // Recherche l'objet avec l'ID spécifié
-  var selectedItem = data.find(function(item) {
-      return item.id === targetId;
+
+// $(document).ready(function () {
+//   // Utiliser Ajax pour charger les données à partir du fichier JSON
+//   $.ajax({
+//     url: 'data.json', // Assurez-vous de spécifier le bon chemin vers votre fichier JSON
+//     dataType: 'json',
+//     success: function (data) {
+//       var menuContainer = $('#menu-container');
+//       var maxPlats = 4; // Spécifiez le nombre maximum de plats à afficher
+
+//       // Parcourir les données des plats
+//       $.each(data.plat, function (index, plat) {
+//         if (plat.active.toLowerCase() === 'yes' && index < maxPlats) {
+//           var platCard = $('<div class=" row col-lg-6 " ></div>');
+//           platCard.append(`
+//           <div class="container row col-12 mx-auto ">
+//           <div class="card col-sm-8 col-10" style="max-width: 540px;">
+//             <div class="row g-0">
+//               <div class="col-md-4">
+//                 <img src="${plat.image}" class="img-fluid rounded-start col-12" style="height: 100%;" alt="cesar-salad">
+//               </div>
+
+//               <div class="col-md-8">
+//                 <div class="card-body" >
+//                   <h5 class="card-title">${plat.libelle}</h5>
+//                   <p class="card-text">${plat.description}</p>
+//                   <p class="card-text">${plat.prix}€</p>
+//                   <a href="commande.html" class="btn btn-primary">Commander</a>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           `);
+
+//           // Ajouter la carte de plat au conteneur du menu
+//           menuContainer.append(platCard);
+//         }
+//       });
+//     },
+//     error: function (error) {
+//       console.log('Erreur lors du chargement des données JSON');
+//       console.log(error);
+//     }
+//   });
+// });
+
+
+$(document).ready(function () {
+  // Utiliser Ajax pour charger les données à partir du fichier JSON
+  $.ajax({
+    url: 'data.json', // Assurez-vous de spécifier le bon chemin vers votre fichier JSON
+    dataType: 'json',
+    success: function (data) {
+      var menuContainer = $('#menu-container');
+      var maxPlats = 4; // Spécifiez le nombre maximum de plats à afficher
+
+      // Parcourir les données des plats
+      $.each(data.plat, function (index, plat) {
+        if (plat.active.toLowerCase() === 'yes' && index < maxPlats) {
+          var platCard = $(`
+            <div  class="image-container col-lg-6 col-md-12 col-sm-10 mx-auto mb-4 d-block image-hover-effect ">
+              <div class="card col-sm-8 col-10" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="${plat.image}" class="img-fluid rounded-start col-12 w-100 h-100" ; object-fit: cover;" alt="${plat.libelle}">
+                  </div>
+
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">${plat.libelle}</h5>
+                      <p class="card-text">${plat.description}</p>
+                      <p class="card-text">${plat.prix}€</p>
+                      <a href="commande.html" class="btn btn-primary">Commander</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `);
+
+          // Ajouter la carte de plat au conteneur du menu
+          menuContainer.append(platCard);
+        }
+      });
+    },
+    error: function (error) {
+      console.log('Erreur lors du chargement des données JSON');
+      console.log(error);
+    }
   });
-
-  if (selectedItem) {
-      // Affiche les informations pour l'objet trouvé
-      var itemDiv = document.createElement("div");
-      itemDiv.innerHTML = "<p>ID: " + selectedItem.id + "</p>" +
-                          "<p>Nom: " + selectedItem.nom + "</p>" +
-                          "<p>Age: " + selectedItem.age + "</p>" +
-                          "<p>Ville: " + selectedItem.ville + "</p>" +
-                          "<img src='" + selectedItem.image + "' alt='Image de profil'>";
-      dataContainer.appendChild(itemDiv);
-  } else {
-      // Aucun objet trouvé avec l'ID spécifié
-      dataContainer.innerHTML = "<p>Aucune donnée trouvée pour l'ID " + targetId + "</p>";
-  }
-}
+});
