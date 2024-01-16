@@ -62,7 +62,7 @@ overflow: hidden;
     width: 20rem;
   }
   
-  h1{
+  h1, h3, h5{
     color: rgb(230, 148, 27);
   
   }
@@ -157,5 +157,5 @@ form{
 
 
 .card-text{
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
