@@ -43,7 +43,7 @@
  <h1 class="d-flex justify-content-center ">Accueil</h1>
   
  
-    <div class="search-container col-12 d-none d-sm-flex  ">
+    <!-- <div class="search-container col-12 d-none d-sm-flex  ">
       <div class="search-bar">
         <form class="form-inline">
           <input class="form-control" type="search" placeholder="Recherche" aria-label="Recherche">
@@ -51,10 +51,20 @@
       </div>
     </div>
 
+    <div id="results-container"></div>
+  -->
 
-      
-
- 
+  <div class="search-container col-12 d-none d-sm-flex">
+    <div class="search-bar">
+      <form class="form-inline">
+        <input class="form-control" type="search" placeholder="Recherche" aria-label="Recherche" id="search-input">
+      </form>
+      <div id="results-container"></div>
+      <div id="selected-element-container"></div>
+    </div>
+  </div>
+  
+  
   
   <!--Catégories-->
 
@@ -160,6 +170,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="JavaScript.js" ></script>
+<script src="search.js"></script>
 
 </body>
 
