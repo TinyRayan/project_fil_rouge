@@ -234,7 +234,7 @@ $(document).ready(function () {
               <img src="${plat.image}" class="img-fluid rounded-start col-12" style="height: 100%;" alt="${plat.libelle}">
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body ">
                 <h5 class="card-title">${plat.libelle}</h5>
                 <p class="card-text">${plat.description}</p>
                 <p class="card-price">${plat.prix}€</p>
@@ -361,3 +361,50 @@ $(document).ready(function () {
 
 
 
+// PAGE Commande
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Charger les données depuis le fichier JSON (remplacez 'chemin/vers/votre/fichier.json' par le chemin réel)
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      // Récupérer la première entrée du tableau des données JSON
+      const item = data[0];
+
+      // Créer un nouvel élément de carte HTML
+      const card = document.createElement('div');
+      card.className = 'card col-10 col-sm-12';
+      card.style.maxWidth = '600px';
+
+      // Remplir le contenu de la carte avec les données JSON
+      card.innerHTML = `
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${plat.image}" class="img-fluid" style="height: 100%;" alt="${plat.alt}">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${plat.title}</h5>
+              <p class="card-text">${item.description}</p>
+              <div class="d-flex">
+                <p class="text col-9">Quantité</p>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Ajouter la carte à la page
+      document.getElementById('app').appendChild(card);
+    })
+    .catch(error => console.error('Erreur lors du chargement du fichier JSON', error));
+});
