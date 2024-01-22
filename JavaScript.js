@@ -1,101 +1,3 @@
-//-------------------------------------------Verif contact form-------------------------//
-
-$(document).ready(function () {
-  $("#myForm").submit(function (event) {
-    event.preventDefault();
-
-    $(".alert").addClass("d-none");
-
-    if ($("#Nom").val().trim() === "") {
-      $("#nomAlert1").removeClass("d-none");
-      return;
-    }
-
-    if ($("#Prenom").val().trim() === "") {
-      $("#prenomAlert1").removeClass("d-none");
-      return;
-    }
-
-    if ($("#Email").val().trim() === "" || !isValidEmail($("#Email").val())) {
-      $("#emailAlert1").removeClass("d-none");
-      return;
-    }
-
-    if ($("#Tel").val().trim() === "" || !isValidPhoneNumber($("#Tel").val())) {
-      $("#telError1").removeClass("d-none");
-      return;
-    }
-
-    if ($("#demande").val().trim() === "") {
-      $("#demandeError1").removeClass("d-none");
-      return;
-    }
-
-    // Si tous les champs sont valides, vous pouvez soumettre le formulaire
-    console.log("Formulaire valide. Envoi du formulaire...");
-    // Décommentez la ligne ci-dessous pour soumettre le formulaire
-    
-    $(this).unbind('submit').submit();
-  });
-
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  function isValidPhoneNumber(phoneNumber) {
-    return /^\d{10}$/.test(phoneNumber);
-  }
-});
-
-
-//------------------------------------verif commande form---------------------------//
-
-
-$(document).ready(function () {
-  $('.formcommande').submit(function () {
-    
-    // Validation du nom
-    var nom = $('#nomcommande').val();
-    if (nom.trim() === '') {
-      $('#nomAlert').removeClass('d-none');
-      return false; // Empêcher l'envoi du formulaire
-    } else {
-      $('#nomAlert').addClass('d-none');
-    }
-
-    // Validation du prénom
-    var prenom = $('#Prenomcommande').val();
-    if (prenom.trim() === '') {
-      $('#prenomAlert').removeClass('d-none');
-      return false; // Empêcher l'envoi du formulaire
-    } else {
-      $('#prenomAlert').addClass('d-none');
-    }
-
-    // Validation de l'adresse
-    var adresse = $('#adressecommande').val();
-    if (adresse.trim() === '') {
-      $('#adresseAlert').removeClass('d-none');
-      return false; // Empêcher l'envoi du formulaire
-    } else {
-      $('#adresseAlert').addClass('d-none');
-    }
-
-    // Validation du téléphone
-    var tel = $('#telcommande').val();
-    if (!/^\d{10}$/.test(tel)) {
-      $('#telError').removeClass('d-none');
-      return false; // Empêcher l'envoi du formulaire
-    } else {
-      $('#telError').addClass('d-none');
-    }
-
-    // Si toutes les validations sont passées, le formulaire sera soumis
-    return true;
-  });
-});
-
-
 //------------------------------------------------ json --------------------------//
 
 
@@ -183,7 +85,9 @@ $(document).ready(function () {
             <h5 class="card-title">${plat.libelle}</h5>
             <p class="card-text">${plat.description}</p>
             <p class="card-price">${plat.prix}€</p>
-            <a href="commande.html" class="btn btn-primary">Commander</a>
+            <a href="commande.html" class="btn btn-primary">Allez voir <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+          </svg> </a>
           </div>
         </div>
       </div>
@@ -361,50 +265,8 @@ $(document).ready(function () {
 
 
 
-// PAGE Commande
 
 
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Charger les données depuis le fichier JSON (remplacez 'chemin/vers/votre/fichier.json' par le chemin réel)
-  fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-      // Récupérer la première entrée du tableau des données JSON
-      const item = data[0];
-
-      // Créer un nouvel élément de carte HTML
-      const card = document.createElement('div');
-      card.className = 'card col-10 col-sm-12';
-      card.style.maxWidth = '600px';
-
-      // Remplir le contenu de la carte avec les données JSON
-      card.innerHTML = `
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="${plat.image}" class="img-fluid" style="height: 100%;" alt="${plat.alt}">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">${plat.title}</h5>
-              <p class="card-text">${item.description}</p>
-              <div class="d-flex">
-                <p class="text col-9">Quantité</p>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-
-      // Ajouter la carte à la page
-      document.getElementById('app').appendChild(card);
-    })
-    .catch(error => console.error('Erreur lors du chargement du fichier JSON', error));
-});
