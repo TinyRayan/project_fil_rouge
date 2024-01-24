@@ -4,49 +4,57 @@
     "id_categorie": 4,
     "libelle": "Pizza",
     "image": "Assets/images_the_district/category/pizza_cat.jpg",
-    "active": "Yes"
+    "active": "Yes",
+    "description":"Découvrez l'apogée de la gastronomie italienne avec notre collection exclusive de Pizzas Gourmet Artisanales. Chaque création est le résultat d'une fusion méticuleuse d'ingrédients de première qualité, soigneusement sélectionnés pour éveiller vos papilles."
    },
    {
     "id_categorie": 5,
     "libelle": "Burger",
     "image": "Assets/images_the_district/category/burger_cat.jpg",
-    "active": "Yes"
+    "active": "Yes",
+    "description":"Plongez dans l'univers savoureux de nos Burgers Gourmet Artisanaux . Chacun de nos burgers est méticuleusement préparé avec des ingrédients frais et de qualité supérieure, garantissant une expérience gustative exceptionnelle à chaque bouchée."
    },
    {
     "id_categorie": 9,
     "libelle": "Wraps",
     "image": "Assets/images_the_district/category/wrap_cat.jpg",
-    "active": "Yes"
+    "active": "Yes",
+    "description":"Explorez une nouvelle dimension de la fraîcheur et de la créativité avec notre collection exclusive de Wraps Gourmet Artisanaux. Ces délices portables sont conçus avec soin, en combinant des ingrédients de première qualité pour vous offrir une expérience culinaire unique, fraîche et savoureuse."
    },
    {
     "id_categorie": 10,
     "libelle": "Pasta",
     "image": "Assets/images_the_district/category/pasta_cat.jpg",
-    "active": "Yes"
+    "active": "Yes",
+    "description":"Plongez dans un voyage gustatif authentique avec notre sélection exceptionnelle de Pâtes Artisanales d'Excellence. Chaque plat est une célébration de la tradition italienne, préparé avec des pâtes fraîches faites maison et des ingrédients de la plus haute qualité, pour une expérience culinaire inoubliable."
    },
    {
     "id_categorie": 11,
     "libelle": "Sandwich",
     "image": "Assets/images_the_district/category/sandwich_cat.jpg",
-    "active": "Yes"
+    "active": "Yes",
+    "description":"Découvrez l'art du sandwich avec notre collection exceptionnelle de Sandwiches Gourmet Faits Maison. Chaque création est conçue avec soin, alliant des ingrédients de première qualité et des saveurs audacieuses pour une expérience de repas délicieuse et mémorable."
    },
    {
     "id_categorie": 12,
     "libelle": "Asian Food",
     "image": "Assets/images_the_district/category/asian_food_cat.jpg",
-    "active": "Yes"
+    "active": "No",
+    "description":"Plongez dans un voyage culinaire exquis avec notre sélection de Saveurs Asiatiques Authentiques, une fusion délicate de traditions et d'innovation pour éveiller vos papilles. Chacun de nos plats est préparé avec soin, en utilisant des ingrédients frais et des techniques inspirées de la riche diversité de la cuisine asiatique."
    },
    {
     "id_categorie": 13,
     "libelle": "Salade",
     "image": "Assets/images_the_district/category/salade_cat.jpg",
-    "active": "YES"
+    "active": "Yes",
+    "description":"Découvrez notre sélection de Salades Fraîches et Gourmandes, une ode à la légèreté et à la vitalité. Chacune de nos créations est élaborée avec des ingrédients de première qualité, mettant en avant la fraîcheur des produits et des combinaisons de saveurs qui raviront votre palais."
    },
    {
     "id_categorie": 14,
     "libelle": "Veggie",
     "image": "Assets/images_the_district/category/veggie_cat.jpg",
-    "active": "Yes"
+    "active": "Yes",
+    "description":"Explorez l'abondance de saveurs et d'innovations avec notre sélection de plats végétariens gourmands. Chaque création est une célébration de la diversité des ingrédients végétaux, préparée avec soin pour offrir une expérience culinaire riche et satisfaisante."
    }
   ],
   "plat":[
