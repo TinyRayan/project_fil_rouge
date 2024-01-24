@@ -127,6 +127,12 @@ body, html{
 
 }
 
+.reload{
+  background-color: blueviolet;
+}
+svg{
+  color: white;
+}
 
 h6{
   color: rgb(230, 148, 27);
@@ -139,7 +145,7 @@ h6{
 
 
 label{
-  color: rgb(255, 0, 208);
+  color: black;
 }
 
 form{
@@ -185,4 +191,27 @@ form{
 
 .error{
   color: orange;
+  display: flex;
+  justify-content: center;
+}
+
+.formcontact {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #3f4449;
+  border-radius: 8px;
+
+}
+
+
+
+.cnt{
+  color: white;
+  margin: 2%;
+}
+
+.input-group {
+  flex-direction: column; /* Align textarea and label vertically */
+  align-items: center; /* Center the textarea within the input group */
 }
