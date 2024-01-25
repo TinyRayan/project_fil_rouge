@@ -72,43 +72,39 @@
 
 
 
-  <form action="#" method="post" class="formcommande">
+  <form action="#"  method="post" id="Form_commande_Validate">
     <div class="d-md-flex">
       <div class="mb-3 m-4">
-        <label for="nomcommande" class="form-label">Nom :</label>
-        <input type="text" class="form-control" id="nomcommande" aria-describedby="emailHelp">
-        <div class="alert alert-warning d-none" id="nomAlert" role="alert">
-          Veuillez entrez un nom valide .
-        </div>
+        <label for="lastname" class="form-label">Nom :</label>
+        <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp">
+        <div id="error_lastname"></div>
       </div>
 
       <div class="mb-3 m-4">
-        <label for="Prenomcommande" class="form-label">Prenom :</label>
-        <input type="text" class="form-control" id="Prenomcommande">
-        <div class="alert alert-warning d-none" id="prenomAlert" role="alert">
-          Veuillez entrez un prenom valide .
-        </div>
+        <label for="firstname" class="form-label">Prenom :</label>
+        <input type="text" class="form-control" id="firstname">
+        <div id="error_firstname"></div>
       </div>
     </div>
 
     <div class="d-md-flex">
       <div class="mb-3 m-4">
-        <label for="adressecommande" class="form-label">Adresse :</label>
-        <input type="text" class="form-control" id="adressecommande">
-        <div class="alert alert-warning d-none " id="adresseAlert" role="alert">
-          Veuillez entrez une adresse valide .
-        </div>
+        <label for="adress" class="form-label">Adresse :</label>
+        <input type="text" class="form-control" id="adress">
+        <div id="error_adress"></div>
       </div>
 
       <div class="mb-3 m-4">
-        <label for="telcommande" class="form-label">Téléphone :</label>
-        <input type="text" class="form-control" id="telcommande">
-        <div class="alert alert-warning d-none" id="telError" role="alert">
-          Veuillez entrez un numero valide .
-        </div>
+        <label for="phone" class="form-label">Téléphone :</label>
+        <input type="text" class="form-control" id="phone">
+        <div id="error_phone"></div>
       </div>
     </div>
     <button type="submit" class="btn btn-primary d-flex">Commander</button>
+    <button class="reload mt-2"  type="reset"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+      <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+    </svg></button>
   </form>
 
 

@@ -75,15 +75,15 @@ body, html{
   
 }
 
-  h1, h3, h5{
-    color: rgb(230, 148, 27);
-  
-  }
+ 
   
   
   /*----------------------Code Main---------------------------*/
-
-/*effet sur image*/
+ h1, h3, h5{
+    color: rgb(230, 148, 27);
+  
+  }
+/* ---Effect on card index categories--- */
   .image-hover-effect {
     transition: transform 0.3s ease-in-out; 
   }
@@ -93,43 +93,75 @@ body, html{
    
   }
 
+/* ---card on plats */
 
 
+.card-img-top{
+  border-radius: 100px;
+}
 
 .card{
   padding: 0%;
   margin: auto;
   margin-top: 5%;
-  max-width: 540px;
+  width: 540px;
   
 }
 
 
-
-
-
-
-.bas_page{
-  margin: 3rem;
-  
+.card-body{
+  background-color: #232629d9;
+  margin: 0;
 
 }
 
+
+
+.card-title{
+  color: blueviolet;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+
+
+.card-text{
+  font-size: 1.1rem;
+  color: #ccc;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.card-price{
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffffff;
+}
+
+/*---all image---*/
 
 .img-thumbnail {
   background-color: rgb(75, 60, 60);
 }
 
-
-.btn{
-  background-color: blueviolet;
-  
-
+.image-container {
+  position: relative;
+  text-align: center;
 }
 
-.reload{
-  background-color: blueviolet;
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(3, 224, 172); /* Couleur du texte */
+  font-size: 28px; /* Taille du texte */
+  font-weight: bold; /* Gras du texte */
+  text-decoration: underline;
 }
+
+
 svg{
   color: white;
 }
@@ -155,39 +187,18 @@ form{
 }
 
 
-.card-img-top{
-  border-radius: 100px;
-}
+/*---All pages---*/
 
+.btn{
+  background-color: blueviolet;
+  
 
-
-.image-container {
-  position: relative;
-  text-align: center;
-}
-
-.image-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(3, 224, 172); /* Couleur du texte */
-  font-size: 28px; /* Taille du texte */
-  font-weight: bold; /* Gras du texte */
-  text-decoration: underline;
-}
-
-
-.card-text{
-  font-size: 1rem;
 }
 
 
 
 
-/* TEST */
-
-
+/* ---Contact--- */
 
 .error{
   color: orange;
@@ -215,3 +226,13 @@ form{
   flex-direction: column; /* Align textarea and label vertically */
   align-items: center; /* Center the textarea within the input group */
 }
+
+
+
+.reload{
+  background-color: blueviolet;
+}
+
+
+
+

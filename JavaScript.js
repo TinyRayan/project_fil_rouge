@@ -1,6 +1,6 @@
 //-----------------------CAT & PLATS ACCUEIL----------------------------//
 
-
+$(document).ready(function(){
 
 
 
@@ -18,8 +18,11 @@ $.get('data.json' ,function (data){
       img.src =data.categorie[i].image
       img.className='img-thumbnail  mt-3 image-hover-effect'
       
+  
+    
+
       const lien =document.createElement('a')
-      lien.href = "categorie.html"
+      lien.href = "plat_burger.html?id="+data.categorie[i].id_categorie
       lien.className='image-container'
       lien.append(img)
       
@@ -43,6 +46,7 @@ $.get('data.json' ,function (data){
 
 
 
+
   const platindex = $('#platindex');
 
   for (let i = 0; i <2 ; i++) {
@@ -54,14 +58,14 @@ $.get('data.json' ,function (data){
   
       const imgCard = document.createElement('img');
       imgCard.src = data.plat[i].image;
-      imgCard.className = "img-fluid rounded-start col-12  col-md-4"; // Adjust the col-6 as needed
+      imgCard.className = "img-fluid rounded-start col-12  col-md-4"; 
   
       const textContent = document.createElement('div');
-      textContent.className = "text d-none d-md-block"; // Takes up the remaining space
+      textContent.className = "text d-none d-md-block"; 
   
       const pTitle = document.createElement('p');
       pTitle.textContent = data.plat[i].libelle;
-      pTitle.className ="d-none d-md-flex justify-content-center"; 
+      pTitle.className ="d-none d-md-flex justify-content-center "; 
       
       const pDesc = document.createElement('p');
       pDesc.textContent = data.plat[i].description;
@@ -102,14 +106,14 @@ $.get('data.json', function (data) {
       }
 
       const card = document.createElement('div');
-      card.className = 'card col-sm-8 col-10 ';
+      card.className = 'card col-sm-8 col-10  ';
 
       const cardBody = document.createElement('div');
-      cardBody.className = 'card-body  row ';
+      cardBody.className = 'card-body p-0 row ';
 
       const imgCard = document.createElement('img');
       imgCard.src = data.plat[i].image;
-      imgCard.className = 'img-fluid col-12 col-md-5';
+      imgCard.className = 'img-fluid p-0 col-12 col-md-5';
       imgCard.alt =data.plat[i].libelle
 
       const textContent = document.createElement('div');
@@ -118,17 +122,18 @@ $.get('data.json', function (data) {
 
       const pTitle = document.createElement('p');
       pTitle.textContent = data.plat[i].libelle;
-      pTitle.className = "d-flex justify-content-center"
+      pTitle.className = "d-flex justify-content-center card-title"
 
       const pDesc = document.createElement('p');
       pDesc.textContent = data.plat[i].description;
+      pDesc.className = ("card-text")
 
       const priceAndBtn = document.createElement('div');
       priceAndBtn.className = 'd-flex';
 
       const pprice = document.createElement('p');
       pprice.textContent = data.plat[i].prix + '€';
-      pprice.className = 'col-6';
+      pprice.className = 'col-6 card-price';
 
       const btn = document.createElement('a');
       btn.className = 'btn mb-2';
@@ -215,7 +220,7 @@ $.get('data.json', function (data) {
   
       const pTitle = document.createElement('p');
       pTitle.textContent = data.categorie[i].libelle;
-      pTitle.className = "d-none d-md-flex justify-content-center"
+      pTitle.className = "d-none d-md-flex justify-content-center card-title"
   
       const pDesc = document.createElement('p');
       pDesc.textContent = data.categorie[i].description;
@@ -267,8 +272,7 @@ $.get('data.json', function (data) {
 
 
 
-
-
+});
 
 
 
