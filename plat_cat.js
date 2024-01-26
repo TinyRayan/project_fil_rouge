@@ -1,41 +1,64 @@
-// ---Plat_Burger---//
 
 
 $(document).ready(function() {
-
-
-    const burger = $('#burgers')
- 
-$.get('data.json', function (data){
     
-    const plats = data.plat.filter(plat => plat.id_categorie == 5);
 
 
+
+const queryString = window.location.search;
+
+
+const urlParams = new URLSearchParams(queryString);
+
+
+const categoryId = urlParams.get('id');
+
+
+console.log(categoryId);
+
+
+    const title_cat_plat = $('#title')
+    const plats_cat = $('#plats');
    
-    plats.forEach(plat =>{
+    $.get('data.json', function(data) {
+        const plats = data.plat.filter(plat => plat.id_categorie == categoryId);
+      
+        
+        plats.forEach(plat => {
+        
+            title_cat_plat.html(plat)
+        
+        
+        
+            const elem_plat = document.createElement('div');
+            elem_plat.className = "card col-10 col-md-8";
+            
+            const img_plat = document.createElement('img');
+            img_plat.src = plat.image;
+            img_plat.className = "img-fluid"
 
 
-    const elem_burger = document.createElement('div');
-    elem_burger.className = "card col-10 col-md-8 "
-    const img_burger = document.createElement('img');
-    img_burger.src = plat.image;
-
-    
-
+            const text_plat = document.createElement('div')
+            text_plat.className = "card-body"
+            
+            const title_plat = document.createElement('p');
+            title_plat.textContent = plat.libelle
 
 
-    burger.append(elem_burger)
-    elem_burger.append(img_burger)
+            const desc_plat = document.createElement('p')
+            desc_plat.textContent =plat.description
 
+            img_plat.addEventListener('click', function() {
+                
+                window.location.href = "plat_cat.html?id=" + plat.id_plat;
+            });
+            
 
-    })
+            plats_cat.append(elem_plat);
+            elem_plat.append(img_plat , text_plat);
+            text_plat.append(title_plat  , desc_plat  )
+        });
 
-console.log(plats)
-
-});
-
-
-
-
-
+        console.log(plats);
+    });
 });

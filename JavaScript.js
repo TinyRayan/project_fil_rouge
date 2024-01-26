@@ -22,7 +22,7 @@ $.get('data.json' ,function (data){
     
 
       const lien =document.createElement('a')
-      lien.href = "plat_burger.html?id="+data.categorie[i].id_categorie
+      lien.href = "plat_cat.html?id="+data.categorie[i].id_categorie
       lien.className='image-container'
       lien.append(img)
       
