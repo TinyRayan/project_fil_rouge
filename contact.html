@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="Assets/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="Assets/styles/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="Assets/scripts/form.js"></script>
 </head>
 <body>
 
-  <div class="parallax-effect"> 
+<div class="parallax-effect"> 
 
-        <!--Navigation-->
-
-        <header>
-          <nav class="navbar navbar-expand-sm bg-body-tertiary p-0">
-            <div class="container-fluid">
-              <img class="col-2" src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav col-12 justify-content-around ">
-                  <li class="nav-item ">
-                    <a class="nav-link " href="index.html">Accueil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="categorie.html">Categorie</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="plats.html">Plats</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
-
-
-
+             <!-----NAVAGATION----->
         
-        <h1 class="d-flex justify-content-center m-2">Contact</h1>
-        <form class="mt-4 formcontact" action="#" method="post" id="FormValidate">
-          
-            <div class=" cnt">
-              <label for="lastname" class="form-label">Nom :</label>
-              <input type="text" class="form-control" id="lastname">
-              <div id="error_lastname"></div>
-            </div>
         
-            <div class="cnt">
-              <label for="firstname" class="form-label">Prenom :</label>
-              <input type="text" class="form-control" id="firstname">
-              <div id="error_firstname"></div>
-            </div>
-          
-        
-          
-            <div class="cnt">
-              <label for="email" class="form-label">Email :</label>
-              <input type="email" class="form-control" id="email">
-              <div id="error_email"></div>
-            </div>
-        
-            <div class="cnt">
-              <label for="phone" class="form-label">Téléphone :</label>
-              <input type="text" class="form-control" id="phone">
-              <div id="error_phone"></div>
-            </div>
-          
-        
-          <div class="input-group justify-content-center mb-3 mt-2">
-            <label for="demande">Votre Demande
-              <textarea class="form-control" aria-label="With textarea" id="demande"></textarea>
-              </label>
-              <div id="error_request"></div>
-          </div>
-          
-          <button type="submit" class="btn btn-primary" id="submitButton">Envoyer</button>
-          <button class="reload mt-2"  type="reset"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
-            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
-          </svg></button>
-        </form>
-  
-      <footer class="container  row d-flex justify-content-around mx-auto mt-5 mb-5">
-        <div class="col-2 col-sm-2 col-lg-1">
-          <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="icon_reseaux">
-        </div>
+<header>
 
-        <div class="col-2 col-sm-2 col-lg-1">
-          <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="icon_reseaux">
-        </div>
+  <nav class="navbar navbar-expand-sm bg-body-tertiary p-0">
+    <div class="container-fluid">
+      <img class="col-2" src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav col-12 justify-content-around ">
 
-        <div class="col-2 col-sm-2 col-lg-1">
-          <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="icon_reseaux">
-        </div>
-      </footer>
+          <li class="nav-item ">
+            <a class="nav-link " href="index.html">Accueil</a>
+          </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="categorie.html">Categorie</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="plats.html">Plats</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+        
+    <!----Main Code (Contact)----->
+            
+<h1 class="d-flex justify-content-center m-2">Contact</h1>
+
+<form class="mt-4 formcontact" action="#" method="post" id="FormValidate">
+
+  <div class=" cnt">
+    <label for="lastname" class="form-label">Nom :</label>
+    <input type="text" class="form-control" id="lastname">
+    <div id="error_lastname"></div>
   </div>
+
+  <div class="cnt">
+    <label for="firstname" class="form-label">Prenom :</label>
+    <input type="text" class="form-control" id="firstname">
+    <div id="error_firstname"></div>
+  </div>
+
+  <div class="cnt">
+    <label for="email" class="form-label">Email :</label>
+    <input type="email" class="form-control" id="email">
+    <div id="error_email"></div>
+  </div>
+
+  <div class="cnt">
+    <label for="phone" class="form-label">Téléphone :</label>
+    <input type="text" class="form-control" id="phone">
+    <div id="error_phone"></div>
+  </div> 
+
+  <div class="input-group justify-content-center mb-3 mt-2">
+    <label for="demande">Votre Demande
+      <textarea class="form-control" aria-label="With textarea" id="demande"></textarea>
+    </label>
+    <div id="error_request"></div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" id="submitButton">Envoyer</button>
+  <button class="reload mt-2" type="reset" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+  </svg></button>
+
+</form>
   
+<!-----Footer(img network)----->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="form.js"></script>
+<footer class="container  row d-flex justify-content-around mx-auto mt-5 mb-5">
 
-  </body>
+  <div class="col-2 col-sm-2 col-lg-1">
+    <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="icon_network">
+  </div>
 
-  </html>
+  <div class="col-2 col-sm-2 col-lg-1">  
+    <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="icon_network">
+  </div>
+
+  <div class="col-2 col-sm-2 col-lg-1">
+    <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="icon_network">
+  </div>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

@@ -34,7 +34,7 @@ body, html{
 
 
 .parallax-effect {
-  background-image: url("images_the_district/parallax.jpg");
+  background-image: url("/Assets/images_the_district/parallax.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,12 +60,15 @@ body, html{
 }
 
 #results {
-  list-style-type: none;
+ 
+  width:  auto;
+  list-style: none;
   padding: 0;
   margin: 0;
-  width: auto;
-  height: auto;
-  z-index: 1;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Pour s'assurer que le résultat est au-dessus du reste du contenu */
 }
 
 #results li {

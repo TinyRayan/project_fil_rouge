@@ -1,155 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plats</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>plats</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="Assets/styles.css">
+  <link rel="stylesheet" href="Assets/styles/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="Assets/scripts/JavaScript.js" ></script>
 </head>
 <body>
 
   <div class="parallax-effect"> 
 
-        <!--Navigation-->
+      <!-----NAVAGATION----->
 
-        <header>
-          <nav class="navbar navbar-expand-sm bg-body-tertiary p-0">
-            <div class="container-fluid">
-              <img class="col-2" src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav col-12 justify-content-around ">
-                  <li class="nav-item ">
-                    <a class="nav-link " href="index.html">Accueil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="categorie.html">Categorie</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="plats.html">Plats</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
+    
+<header>
 
-        <h1 class="d-flex justify-content-center m-2">Tout les plats</h1>
-        <div class="search-container d-none d-sm-flex">
-          <div class="search-bar">
-            <form class="form-inline">
-              <input class="form-control" type="search" placeholder="Recherche" aria-label="Recherche">
-            </form>
-          </div>
-        </div>       
+  <nav class="navbar navbar-expand-sm bg-body-tertiary p-0">
+    <div class="container-fluid">
+      <img class="col-2" src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav col-12 justify-content-around ">
 
-        <!-- <div class="container row col-12 mx-auto ">
-          <div class="card col-sm-8 col-10" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="Assets/images_the_district/food/cesar_salad.jpg" class="img-fluid rounded-start col-12" style="height: 100%;" alt="cesar-salad">
-              </div>
+          <li class="nav-item ">
+            <a class="nav-link " href="index.html">Accueil</a>
+          </li>
 
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Salad César</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum alias, aliquid magni, blanditiis ea praesentium recusandae aperiam, </p>
-                  <a href="commande.html" class="btn btn-primary">Commander</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="categorie.html">Categorie</a>
+          </li>
 
-          <div class="card col-sm-8 col-10" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="Assets/images_the_district/food/pizza-salmon.png" class="img-fluid rounded-start col-12" style="height: 100%;" alt="pizza_saumon">
-              </div>
+          <li class="nav-item">
+            <a class="nav-link" href="plats.html">Plats</a>
+          </li>
 
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Pizza Saumon</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum alias, aliquid magni, blanditiis ea praesentium recusandae aperiam, </p>
-                  <a href="#" class="btn btn-primary">Commander</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
 
-        <div class="container row col-12 mx-auto ">
-          <div class="card col-sm-8 col-10 " style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="Assets/images_the_district/food/buffalo-chicken.webp" class="img-fluid rounded-start col-12" style="height: 100%;" alt="wrap_poulet">
-              </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Wrap Légumes</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum alias, aliquid magni, blanditiis ea praesentium recusandae aperiam, </p>
-                  <a href="#" class="btn btn-primary">Commander</a>
-                </div>
-              </div>
-            </div>
-          </div>
+</header>
+  
 
-          <div class="card col-sm-8 col-10 " style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="Assets/images_the_district/food/courgettes_farcies.jpg" class="img-fluid rounded-start col-11" style="height: 100%;" alt="courgettes_farcies">
-              </div>
+          <!--research bar-->
 
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Wrap Légumes</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum alias, aliquid magni, blanditiis ea praesentium recusandae aperiam, </p>
-                  <a href="#" class="btn btn-primary">Commander</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+<h1 class="d-flex justify-content-center m-2">Tout les plats</h1>
 
-        <div id="plat" class="container row col-12 mx-auto">
-          <!-- Content will be dynamically added here through jQuery -->
-        </div>
-        <div class="container justify-content-around d-flex mt-3 "> 
-          <a href="#" id="prev-btn" class="btn">Précédent</a>
-          <a href="#" id="next-btn" class="btn">Suivant</a>
+<div class="search-container d-none d-sm-flex">
+  <div class="search-bar">
+    <form class="form-inline">
+      <input class="form-control" type="search" placeholder="Recherche" aria-label="Recherche">
+    </form>
+  </div>
+</div>       
 
-        </div> 
+      <!----Main Code (All plats)----->
+
+<div id="plat" class="container row col-12 mx-auto"></div>
+
+<div class="container justify-content-around d-flex mt-3 "> 
+  <a href="#" id="prev-btn" class="btn">Précédent</a>
+  <a href="#" id="next-btn" class="btn">Suivant</a>
+</div> 
         
-        <footer class="container  row d-flex justify-content-around mx-auto mt-5 mb-5">  
-          <div class="col-2 col-sm-2 col-lg-1">
-            <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="icon_reseaux">
-          </div>
-        
-          <div class="col-2 col-sm-2 col-lg-1">
-            <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="icon_reseaux">
-          </div>
-        
-          <div class="col-2 col-sm-2 col-lg-1">
-            <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="icon_reseaux">
-          </div>
-        </footer>
+
+<!-----Footer(img reseaux)----->
+
+
+<footer class="container  row d-flex justify-content-around mx-auto mt-5 mb-5">  
+
+  <div class="col-2 col-sm-2 col-lg-1">
+    <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="icon_network">
+  </div>        
+
+  <div class="col-2 col-sm-2 col-lg-1">
+    <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="icon_network">
+  </div>
+
+    <div class="col-2 col-sm-2 col-lg-1">
+      <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="icon_network">
+    </div>
+
+  </footer>
           
 
         
   </div>
    
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="JavaScript.js" defer></script>
+ 
 </body>
 
 </html>

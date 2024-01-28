@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 
-$.get('data.json' ,function (data){
+$.get('Assets/json/data.json' ,function (data){
     
   const catindex= $('#catindex')
   for(i=0 ; i<6 ;i++){
@@ -92,7 +92,7 @@ $.get('data.json' ,function (data){
 //-----------------PAGE DES PLATS---------------------//
 
 
-$.get('data.json', function (data) {
+$.get('Assets/json/data.json', function (data) {
   const plat = $('#plat');
   const cardsPerPage = 4;
   let currentPage = 1;
@@ -136,6 +136,7 @@ $.get('data.json', function (data) {
       pprice.className = 'col-6 card-price';
 
       const btn = document.createElement('a');
+      btn.href= "commande.html?id="+data.categorie[i].id_categorie
       btn.className = 'btn mb-2';
       btn.textContent = 'Commander';
 
@@ -143,10 +144,8 @@ $.get('data.json', function (data) {
       card.append(cardBody);
       cardBody.append(imgCard);
       cardBody.append(textContent);
-      textContent.append(pTitle);
-      textContent.append(pDesc);
-      textContent.append(priceAndBtn);
-      priceAndBtn.append(pprice);
+      textContent.append(pTitle ,pDesc ,priceAndBtn ,pprice);
+      
       priceAndBtn.append(btn);
     }
   }
@@ -193,7 +192,7 @@ $.get('data.json', function (data) {
 //---------------PAGE CAT----------------
 
 
-$.get('data.json', function (data) {
+$.get('Assets/json/data.json', function (data) {
   const  cat= $('#cat');
   const cardsPerPage = 4;
   let currentPage = 1;
@@ -208,6 +207,12 @@ $.get('data.json', function (data) {
       const card = document.createElement('div');
       card.className = "card col-10 col-md-8 mx-auto mt-4 m-0";
   
+
+      const btn = document.createElement('a');
+      btn.className = "btn"
+      btn.textContent = "Voir plus"
+      btn.href = "plat_cat.html?id=" + data.categorie[i].id_categorie;
+
       const cardBody = document.createElement('div');
       cardBody.className = "card-body d-flex p-0";
   
@@ -230,12 +235,15 @@ $.get('data.json', function (data) {
       title.className='image-text d-block d-md-none'
       title.textContent=data.categorie[i].libelle
   
+
+
+      
       cat.append(card);
       card.append(cardBody);
       cardBody.append(imgCard);
       cardBody.append(textContent);
       textContent.append(pTitle);
-      textContent.append(pDesc);
+      textContent.append(pDesc ,btn);
       card.append(title);
   }
      

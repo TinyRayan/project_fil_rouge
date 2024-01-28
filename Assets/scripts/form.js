@@ -51,54 +51,106 @@
 
       if ($(request).val().trim()=== ""){
         $(error_request).html("<p class=error >Veuillez saisir votre demande.</p>")        
+        return;
       } else {
         $(error_request).html("");
       }
       
 
-      const adress = document.querySelector("#adress");
-      const error_adress = document.querySelector("#error_adress");
-
-      if ($(adress).val().trim()=== ""){
-        $(error_adress).html("<p class=error>Veuillez entrez une Adresse Valide.</p>")
-        return;
-      } else{
-        $(error_adress).html("");
-      }
+      
         
       $(this).unbind('submit').submit();
      
-      this.reset(); 
+      this.reset();
      
-    });
+ 
 
 
-    
-    
+    });   
 
-     
-
-
-    function isValidEmail(email) {
+     function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
   
     function isValidPhoneNumber(phoneNumber) {
       return /^\d{10}$/.test(phoneNumber);
     }
-
     
 
+     
+
+
+ 
+
+    
+ 
   
-  
-  
 
 
-//--FORM VALIDATE COMMANDE---//
+//--FORM VALIDATE COMMANDE & CARD COMMANDE---//
 
 
 
   
+
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const platId = urlParams.get('id');
+
+  console.log(platId);
+
+  const platDetail = $('#commande');
+
+  $.get('Assets/json/data.json', function(data) {
+      const plat = data.plat.find(plat => plat.id_plat == platId);
+
+      const elem_plat = document.createElement('div');
+      elem_plat.className = "card col-12 col-md-8 mx-auto";
+
+      const img_plat = document.createElement('img');
+      img_plat.src = plat.image;
+      img_plat.className = "img-fluid ";
+
+      const text_plat = document.createElement('div');
+      text_plat.className = "card-body";
+
+      const title_plat = document.createElement('p');
+      title_plat.textContent = plat.libelle;
+
+      const desc_plat = document.createElement('p');
+      desc_plat.textContent = plat.description;
+
+     
+      platDetail.append(elem_plat);
+      elem_plat.append(img_plat, text_plat);
+      text_plat.append(title_plat, desc_plat);
+  
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $("#Form_commande_Validate").submit(function(event){
   event.preventDefault();
 
@@ -151,23 +203,28 @@ $("#Form_commande_Validate").submit(function(event){
     
   $(this).unbind('submit').submit();
  
-  
+  this.reset();
  
 });
-
-
-
-
-
- 
-
-
 
 
 function isValidPhoneNumber(phoneNumber) {
   return /^\d{10}$/.test(phoneNumber);
 }
   
+
+  });
+ 
+
+
+
+
+
+  
+  
+  
+  
+ 
   
   
   
@@ -179,12 +236,7 @@ function isValidPhoneNumber(phoneNumber) {
   
   
   
-  
-  
-  
-  
-  
-});
+
   
   
   

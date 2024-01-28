@@ -81,7 +81,7 @@
     "libelle": "Buffalo Chicken Wrap",
     "description": "Du bon filet de poulet mariné dans notre spécialité sucrée & épicée, enveloppé dans une tortilla blanche douce faite maison.",
     "prix": 5,
-    "image": "Assets/images_the_district/food/buffalo-chicken.webp",
+    "image": "Assets/images_the_district/food/buffalo-chicken.jpg",
     "id_categorie": 9,
     "active": "Yes"
    },
@@ -97,7 +97,7 @@
    {
     "id_plat": 12,
     "libelle": "Spaghetti aux légumes",
-    "description": "Un plat de spaghetti au pesto de basilic et légumes poêlés, très parfumé et rapide",
+    "description": "Un plat de spaghetti au pesto de basilic et légumes poêlés, très parfumé et rapide. le tout relevé de baies roses et de basilic frais.",
     "prix": 10,
     "image": "Assets/images_the_district/food/spaghetti-legumes.jpg",
     "id_categorie": 10,
@@ -144,7 +144,7 @@
     "libelle": "Tagliatelles au saumon",
     "description": "Découvrez notre recette délicieuse de tagliatelles au saumon frais et à la crème qui qui vous assure un véritable régal!",
     "prix": 12,
-    "image": "Assets/images_the_district/food/tagliatelles_saumon.webp",
+    "image": "Assets/images_the_district/food/tagliatelles_saumon.jpg",
     "id_categorie": 10,
     "active": "Yes"
    }
