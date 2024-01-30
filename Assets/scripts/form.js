@@ -77,6 +77,23 @@
     }
     
 
+    if ($(".error").length === 0) {
+      $.ajax({
+          type: "POST", // Utilisez la méthode POST pour envoyer les données
+          url: "Assets/scripts/contact.php", // Spécifiez l'URL de votre fichier PHP
+          data: $("#FormValidate").serialize(), // Sérialisez les données du formulaire
+          success: function(response){
+              // Gérez la réponse du serveur (si nécessaire)
+              console.log(response);
+          },
+          error: function(error){
+              // Gérez les erreurs (si nécessaire)
+              console.log(error);
+          }
+      });
+
+
+    }
      
 
 
