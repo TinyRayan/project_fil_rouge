@@ -17,32 +17,9 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
   <div class="parallax-effect"> 
 
   
-  <header>
-    <nav class="navbar navbar-expand-sm bg-body-tertiary p-0">
-      <div class="container-fluid">
-        <img class="col-2" src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav col-12 justify-content-around ">
-            <li class="nav-item ">
-              <a class="nav-link " href="index.html">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="categorie.html">Categorie</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="plats.html">Plats</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <?php
+  require_once('Assets/php/menu.php')
+?>
 
 
 
@@ -91,24 +68,6 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
 
 
 
-  <footer class="container  row d-flex justify-content-around mx-auto my-5 mb-5">
-    <div class="col-2 col-sm-2 col-lg-1">
-      <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="icon_reseaux">
-    </div>
-
-    <div class="col-2 col-sm-2 col-lg-1">
-      <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="icon_reseaux">
-    </div>
-    <div class="col-2 col-sm-2 col-lg-1"ttv>
-      <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="icon_reseaux">
-    </div> 
-  </footer>
-  
-  </div>
-  
-
-
-
-</body>
-
-</html>
+  <?php
+  require_once('Assets/php/footer.php')
+?>

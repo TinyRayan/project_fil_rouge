@@ -19,45 +19,15 @@
              <!-----NAVAGATION----->
         
         
-<header>
-
-  <nav class="navbar navbar-expand-sm bg-body-tertiary p-0">
-    <div class="container-fluid">
-      <img class="col-2" src="Assets/images_the_district/the_district_brand/logo_transparent.png" alt="">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav col-12 justify-content-around ">
-
-          <li class="nav-item ">
-            <a class="nav-link " href="index.html">Accueil</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="categorie.html">Categorie</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="plats.html">Plats</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-</header>
+             <?php
+  require_once('Assets/php/menu.php')
+?>
         
     <!----Main Code (Contact)----->
             
 <h1 class="d-flex justify-content-center m-2">Contact</h1>
 
-<form class="mt-4 formcontact" action="Assets/scripts/contact.php" method="post" id="FormValidate">
+<form class="mt-4 formcontact" action="Assets/php/form.php" method="POST" id="FormValidate">
 
   <div class=" cnt">
     <label for="lastname" class="form-label">Nom :</label>
@@ -100,24 +70,6 @@
   
 <!-----Footer(img network)----->
 
-<footer class="container  row d-flex justify-content-around mx-auto mt-5 mb-5">
-
-  <div class="col-2 col-sm-2 col-lg-1">
-    <img src="Assets/images_the_district/the_district_brand/facebook_profile_image.png" class="card-img-top" alt="icon_network">
-  </div>
-
-  <div class="col-2 col-sm-2 col-lg-1">  
-    <img src="Assets/images_the_district/the_district_brand/instagram_profile_image.png" class="card-img-top" alt="icon_network">
-  </div>
-
-  <div class="col-2 col-sm-2 col-lg-1">
-    <img src="Assets/images_the_district/the_district_brand/twitter_profile_image.png" class="card-img-top" alt="icon_network">
-  </div>
-
-</footer>
-
-</div>
-
-</body>
-
-</html>
+<?php
+  require_once('Assets/php/footer.php')
+?>

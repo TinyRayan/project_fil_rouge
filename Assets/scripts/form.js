@@ -76,24 +76,38 @@
       return /^\d{10}$/.test(phoneNumber);
     }
     
-
-    if ($(".error").length === 0) {
-      $.ajax({
-          type: "POST", // Utilisez la méthode POST pour envoyer les données
-          url: "Assets/scripts/contact.php", // Spécifiez l'URL de votre fichier PHP
-          data: $("#FormValidate").serialize(), // Sérialisez les données du formulaire
-          success: function(response){
-              // Gérez la réponse du serveur (si nécessaire)
-              console.log(response);
-          },
-          error: function(error){
-              // Gérez les erreurs (si nécessaire)
-              console.log(error);
-          }
+    $(document).ready(function(){
+      $("#FormValidate").submit(function(event){
+          event.preventDefault();
+  
+          // ... (votre code existant)
+  
+          // Envoi du formulaire vers le fichier PHP
+          $.ajax({
+              type: "POST",
+              url: "Assets/php/form.php", // Remplacez par le chemin correct vers votre fichier PHP
+              data: $(this).serialize(),
+              success: function(response){
+                  console.log(response); // Affichez la réponse du serveur dans la console (peut être supprimé)
+                  // Vous pouvez ajouter des actions supplémentaires ici en fonction de la réponse du serveur
+              },
+              error: function(error){
+                  console.log(error); // Affichez les erreurs dans la console (peut être supprimé)
+              }
+          });
+  
+          // Remplacez le code suivant par votre logique d'envoi de formulaire si nécessaire
+          // $(this).unbind('submit').submit();
+          // this.reset();
       });
+  
+      // ... (votre code existant)
+  });
+  
+  
 
 
-    }
+ 
      
 
 

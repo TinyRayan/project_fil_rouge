@@ -22,7 +22,7 @@ $.get('Assets/json/data.json' ,function (data){
     
 
       const lien =document.createElement('a')
-      lien.href = "plat_cat.html?id="+data.categorie[i].id_categorie
+      lien.href = "plat_cat.php?id="+data.categorie[i].id_categorie
       lien.className='image-container'
       lien.append(img)
       
@@ -101,10 +101,11 @@ $.get('Assets/json/data.json', function (data) {
     plat.empty();
 
     for (let i = startIndex; i < endIndex; i++) {
-      if (i >= data.plat.length) {
+      if (i > data.plat.length) {
         break;
       }
 
+      console.log(data)
       const card = document.createElement('div');
       card.className = 'card col-sm-8 col-10  ';
 
@@ -136,7 +137,7 @@ $.get('Assets/json/data.json', function (data) {
       pprice.className = 'col-6 card-price';
 
       const btn = document.createElement('a');
-      btn.href= "commande.html?id="+data.categorie[i].id_categorie
+      btn.href= "commande.php?id="+data.plat[i].id_plat
       btn.className = 'btn mb-2';
       btn.textContent = 'Commander';
 
@@ -208,10 +209,12 @@ $.get('Assets/json/data.json', function (data) {
       card.className = "card col-10 col-md-8 mx-auto mt-4 m-0";
   
 
-      const btn = document.createElement('a');
-      btn.className = "btn"
-      btn.textContent = "Voir plus"
-      btn.href = "plat_cat.html?id=" + data.categorie[i].id_categorie;
+      const lien =document.createElement('a')
+      lien.href = "plat_cat.php?id="+data.categorie.id_categorie
+      lien.className='image-container'
+      
+      
+      
 
       const cardBody = document.createElement('div');
       cardBody.className = "card-body d-flex p-0";
@@ -236,15 +239,14 @@ $.get('Assets/json/data.json', function (data) {
       title.textContent=data.categorie[i].libelle
   
 
-
-      
+    
+      lien.appendChild(imgCard)
       cat.append(card);
-      card.append(cardBody);
-      cardBody.append(imgCard);
-      cardBody.append(textContent);
-      textContent.append(pTitle);
-      textContent.append(pDesc ,btn);
-      card.append(title);
+      card.append(cardBody ,title , lien);
+      cardBody.append(imgCard ,textContent);
+      textContent.append(pTitle ,pDesc);
+      
+      
   }
      
     

@@ -30,7 +30,7 @@ $(document).ready(function() {
             desc_plat.textContent = plat.description;
 
             const btn = document.createElement('a');
-            btn.href = "commande.html?id=" + plat.id_plat;
+            btn.href = "commande.php?id=" + plat.id_plat;
             btn.className = 'btn mb-2';
             btn.textContent = 'Commander';
 
