@@ -4,7 +4,7 @@
     $("#FormValidate").submit(function(event){
       event.preventDefault();
   
-      
+    
 
       
       const lastname = document.querySelector("#lastname");
@@ -61,8 +61,8 @@
         
       $(this).unbind('submit').submit();
      
-      this.reset();
-     
+      
+
  
 
 
@@ -75,41 +75,11 @@
     function isValidPhoneNumber(phoneNumber) {
       return /^\d{10}$/.test(phoneNumber);
     }
-    
-    $(document).ready(function(){
-      $("#FormValidate").submit(function(event){
-          event.preventDefault();
-  
-          // ... (votre code existant)
-  
-          // Envoi du formulaire vers le fichier PHP
-          $.ajax({
-              type: "POST",
-              url: "Assets/php/form.php", // Remplacez par le chemin correct vers votre fichier PHP
-              data: $(this).serialize(),
-              success: function(response){
-                  console.log(response); // Affichez la réponse du serveur dans la console (peut être supprimé)
-                  // Vous pouvez ajouter des actions supplémentaires ici en fonction de la réponse du serveur
-              },
-              error: function(error){
-                  console.log(error); // Affichez les erreurs dans la console (peut être supprimé)
-              }
-          });
-  
-          // Remplacez le code suivant par votre logique d'envoi de formulaire si nécessaire
-          // $(this).unbind('submit').submit();
-          // this.reset();
-      });
-  
-      // ... (votre code existant)
-  });
-  
-  
-
+   
 
  
      
-
+ 
 
  
 
@@ -158,28 +128,6 @@
       text_plat.append(title_plat, desc_plat);
   
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 $("#Form_commande_Validate").submit(function(event){
@@ -244,12 +192,11 @@ function isValidPhoneNumber(phoneNumber) {
 }
   
 
-  });
- 
+  
 
 
 
-
+});
 
   
   

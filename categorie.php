@@ -13,7 +13,7 @@
     <script src="Assets/scripts/JavaScript.js" ></script>
 </head>
 <body>
-<div class="parallax-effect">   
+  
   
 <?php
   require_once('Assets/php/menu.php')

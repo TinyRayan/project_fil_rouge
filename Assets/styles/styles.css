@@ -49,39 +49,33 @@ body, html{
 
 
  
-.search-container {
-  max-width: 300px;
+ .search-container {
+   max-width: 300px;
   margin: 50px auto;
 }
 
 
 #searchInput {
-  width: 100%;
+  width: auto;
   padding: 5px;
   box-sizing: border-box;
 }
 
 #results {
  
-  width:  auto;
+  width: 50%;
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 999; /* Pour s'assurer que le résultat est au-dessus du reste du contenu */
-}
+  position: absolute;
+  z-index: 1;
 
-#results li {
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-top: 5px;
+}  
   
-}
 
- 
-  
   
   /*----------------------Code Main---------------------------*/
  h1, h3, h5{

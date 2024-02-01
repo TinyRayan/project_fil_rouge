@@ -14,8 +14,7 @@
  <script src="Assets/scripts/search.js"></script>  
 </head>
 <body>
- 
-<div class="parallax-effect"> 
+
 
       <!-----NAVAGATION----->
 

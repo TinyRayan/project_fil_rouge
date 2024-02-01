@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <div class="parallax-effect"> 
+  
 
       <!-----NAVAGATION----->
       <?php

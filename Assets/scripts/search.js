@@ -17,7 +17,7 @@ $(document).ready(function() {
           
             const list =document.querySelector('#results')
 
-
+            list.innerHTML = '';
                 plats.forEach(plat => {
 
                     const listtitle = document.createElement('a')

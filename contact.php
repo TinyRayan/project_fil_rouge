@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="parallax-effect"> 
+
 
              <!-----NAVAGATION----->
         
@@ -27,35 +27,35 @@
             
 <h1 class="d-flex justify-content-center m-2">Contact</h1>
 
-<form class="mt-4 formcontact" action="Assets/php/form.php" method="POST" id="FormValidate">
+<form class="mt-4 formcontact" action="form.php" method="POST" id="FormValidate">
 
   <div class=" cnt">
     <label for="lastname" class="form-label">Nom :</label>
-    <input type="text" class="form-control" id="lastname">
+    <input type="text" class="form-control" id="lastname" name="lastname">
     <div id="error_lastname"></div>
   </div>
 
   <div class="cnt">
     <label for="firstname" class="form-label">Prenom :</label>
-    <input type="text" class="form-control" id="firstname">
+    <input type="text" class="form-control" id="firstname" name="firstname">
     <div id="error_firstname"></div>
   </div>
 
   <div class="cnt">
     <label for="email" class="form-label">Email :</label>
-    <input type="email" class="form-control" id="email">
+    <input type="email" class="form-control" id="email" name="email">
     <div id="error_email"></div>
   </div>
 
   <div class="cnt">
     <label for="phone" class="form-label">Téléphone :</label>
-    <input type="text" class="form-control" id="phone">
+    <input type="text" class="form-control" id="phone" name="phone">
     <div id="error_phone"></div>
   </div> 
 
   <div class="input-group justify-content-center mb-3 mt-2">
     <label for="demande">Votre Demande
-      <textarea class="form-control" aria-label="With textarea" id="demande"></textarea>
+      <textarea class="form-control" aria-label="With textarea" id="demande" name="demande"></textarea>
     </label>
     <div id="error_request"></div>
   </div>

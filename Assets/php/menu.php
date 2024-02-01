@@ -1,3 +1,5 @@
+<div class="parallax-effect"> 
+
 <header>
 
   <nav class="navbar navbar-expand-sm bg-body-tertiary p-0">
