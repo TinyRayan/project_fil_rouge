@@ -30,7 +30,7 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
 
 <div id="commande" class="row"></div>
 
-  <form action="#"  method="post" id="Form_commande_Validate">
+  <form action="#" class="form-bg" method="post" id="Form_commande_Validate">
     <div class="d-md-flex">
       <div class="mb-3 m-4">
         <label for="lastname" class="form-label">Nom :</label>

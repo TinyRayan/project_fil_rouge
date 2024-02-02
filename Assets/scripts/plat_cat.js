@@ -14,7 +14,7 @@ $(document).ready(function() {
             title_cat_plat.html(plat);
 
             const elem_plat = document.createElement('div');
-            elem_plat.className = "card col-10 col-md-8";
+            elem_plat.className = "card col-10 col-md-8 ";
 
             const img_plat = document.createElement('img');
             img_plat.src = plat.image;

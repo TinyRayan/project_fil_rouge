@@ -24,13 +24,12 @@ $(document).ready(function(){
         const lien =document.createElement('a')
         lien.href = "plat_cat.php?id="+data.categorie[i].id_categorie
         lien.className='image-container'
-        lien.append(img)
+        
         
         const p = document.createElement('p')
         p.className='image-text'
         p.textContent=data.categorie[i].libelle
   
-          
       
   
   
@@ -75,13 +74,25 @@ $(document).ready(function(){
         title.className='image-text d-block d-md-none'
         title.textContent=data.categorie[i].libelle
     
+        
+        
+        const btn = document.createElement('a');
+        btn.href= "commande.php?id="+data.plat[i].id_plat
+        btn.className = 'btn btn-card mb-2';
+        btn.textContent = 'Commander';
+        
+        const link =document.createElement('a');
+        link.href="commande.php?id="+data.plat[i].id_plat
+        link.className="img-container"
+
+        link.append(title)
         platindex.append(card);
         card.append(cardBody);
         cardBody.append(imgCard);
         cardBody.append(textContent);
         textContent.append(pTitle);
-        textContent.append(pDesc);
-        card.append(title);
+        textContent.append(pDesc , btn);
+        card.append(link);
     }
     
     
@@ -138,14 +149,14 @@ $(document).ready(function(){
   
         const btn = document.createElement('a');
         btn.href= "commande.php?id="+data.plat[i].id_plat
-        btn.className = 'btn mb-2';
+        btn.className = 'btn btn-card mb-2';
         btn.textContent = 'Commander';
   
         plat.append(card);
         card.append(cardBody);
         cardBody.append(imgCard);
         cardBody.append(textContent);
-        textContent.append(pTitle ,pDesc ,priceAndBtn ,pprice);
+        textContent.append(pTitle ,pDesc ,pprice ,priceAndBtn );
         
         priceAndBtn.append(btn);
       }
@@ -211,7 +222,7 @@ $(document).ready(function(){
   
         const lien =document.createElement('a')
         lien.href = "plat_cat.php?id="+data.categorie[i].id_categorie;
-        lien.className='btn d-none d-md-block'
+        lien.className='btn btn-card d-none d-md-block m-0  justify-content-center  '
         lien.textContent="voir plus "
         
 
@@ -238,7 +249,7 @@ $(document).ready(function(){
         pDesc.className = "card-text d-none d-md-block"
   
         const title = document.createElement('a')
-        title.className='image-text d-block d-md-none'
+        title.className='image-text d-block d-md-none m-0  '
         title.textContent=data.categorie[i].libelle
         title.href = "plat_cat.php?id="+data.categorie[i].id_categorie;
 

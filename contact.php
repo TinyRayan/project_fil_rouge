@@ -27,7 +27,7 @@
             
 <h1 class="d-flex justify-content-center m-2">Contact</h1>
 
-<form class="mt-4 formcontact" action="form.php" method="POST" id="FormValidate">
+<form class="mt-4 form-bg" action="form.php" method="POST" id="FormValidate">
 
   <div class=" cnt">
     <label for="lastname" class="form-label">Nom :</label>

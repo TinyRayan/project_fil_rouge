@@ -103,7 +103,7 @@ body, html{
   padding: 0%;
   margin: auto;
   margin-top: 5%;
-  width: 540px;
+  max-width: 540px;
   
 }
 
@@ -113,6 +113,8 @@ body, html{
   margin: 0;
 
 }
+
+
 
 
 
@@ -161,9 +163,7 @@ body, html{
 }
 
 
-svg{
-  color: white;
-}
+
 
 h6{
   color: rgb(230, 148, 27);
@@ -190,11 +190,14 @@ form{
 
 .btn{
   background-color: blueviolet;
+  width: auto;
   
-
 }
 
-
+.btn-card{
+  background-color: #a95020d9;
+  width: 40%;
+}
 
 
 /* ---Contact--- */
@@ -205,12 +208,13 @@ form{
   justify-content: center;
 }
 
-.formcontact {
+.form-bg {
   max-width: 500px;
   margin: auto;
   padding: 20px;
   background-color: #3f4449;
   border-radius: 8px;
+  margin-top: 1rem;
 
 }
 
@@ -235,3 +239,35 @@ form{
 
 
 
+/* ---Footer--- */
+
+
+svg{
+  color: white;
+ 
+}
+
+
+.social{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.copyright{
+  color: white;
+  padding: 0%;
+  margin: 0%;
+  
+}
+
+.list-inline-item a{
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.list-inline li{
+  margin-top: 1rem;
+}

@@ -114,13 +114,15 @@
       img_plat.className = "img-fluid ";
 
       const text_plat = document.createElement('div');
-      text_plat.className = "card-body";
+      text_plat.className = "card-body card-title";
 
       const title_plat = document.createElement('p');
       title_plat.textContent = plat.libelle;
+     
 
       const desc_plat = document.createElement('p');
       desc_plat.textContent = plat.description;
+      desc_plat.className ="card-text"
 
      
       platDetail.append(elem_plat);
