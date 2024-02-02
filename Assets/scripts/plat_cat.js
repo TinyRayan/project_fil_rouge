@@ -5,39 +5,59 @@ $(document).ready(function() {
     console.log(categoryId);
 
     const title_cat_plat = $('#title');
+    
     const plats_cat = $('#plats');
 
     $.get('Assets/json/data.json', function(data) {
+       
+    
         const plats = data.plat.filter(plat => plat.id_categorie == categoryId);
 
         plats.forEach(plat => {
             title_cat_plat.html(plat);
 
-            const elem_plat = document.createElement('div');
-            elem_plat.className = "card col-10 col-md-8 ";
-
-            const img_plat = document.createElement('img');
-            img_plat.src = plat.image;
-            img_plat.className = "img-fluid";
-
-            const text_plat = document.createElement('div');
-            text_plat.className = "card-body";
-
-            const title_plat = document.createElement('p');
-            title_plat.textContent = plat.libelle;
-
-            const desc_plat = document.createElement('p');
-            desc_plat.textContent = plat.description;
-
-            const btn = document.createElement('a');
-            btn.href = "commande.php?id=" + plat.id_plat;
-            btn.className = 'btn mb-2';
-            btn.textContent = 'Commander';
-
-            plats_cat.append(elem_plat);
-            elem_plat.append(img_plat, text_plat);
-            text_plat.append(title_plat, desc_plat);
-            text_plat.append(btn);
+            const card = document.createElement('div');
+        card.className = 'card col-sm-8 col-10  ';
+  
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body p-0 row ';
+  
+        const imgCard = document.createElement('img');
+        imgCard.src = plat.image;
+        imgCard.className = 'img-fluid p-0 col-12 col-md-5 ';
+        imgCard.alt =plat.libelle
+  
+        const textContent = document.createElement('div');
+        textContent.className = "col-12 col-md-7 p-0 m-0"
+        
+  
+        const pTitle = document.createElement('p');
+        pTitle.textContent = plat.libelle;
+        pTitle.className = "d-flex justify-content-center card-title"
+  
+        const pDesc = document.createElement('p');
+        pDesc.textContent = plat.description;
+        pDesc.className = "card-text"
+  
+        const priceAndBtn = document.createElement('div');
+        priceAndBtn.className = 'd-flex';
+  
+        const pprice = document.createElement('p');
+        pprice.textContent = plat.prix + '€';
+        pprice.className = 'col-6 card-price';
+  
+        const btn = document.createElement('a');
+        btn.href= "commande.php?id="+plat.id_plat
+        btn.className = 'btn btn-card mb-2';
+        btn.textContent = 'Commander';
+  
+        plats_cat.append(card);
+        card.append(cardBody);
+        cardBody.append(imgCard);
+        cardBody.append(textContent);
+        textContent.append(pTitle ,pDesc ,pprice ,priceAndBtn );
+        
+        priceAndBtn.append(btn); 
         });
 
         console.log(plats);

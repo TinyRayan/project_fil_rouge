@@ -107,14 +107,14 @@
       const plat = data.plat.find(plat => plat.id_plat == platId);
 
       const elem_plat = document.createElement('div');
-      elem_plat.className = "card col-12 col-md-8 mx-auto";
+      elem_plat.className = "card col-12 col-md-8 mx-auto ";
 
       const img_plat = document.createElement('img');
       img_plat.src = plat.image;
       img_plat.className = "img-fluid ";
 
       const text_plat = document.createElement('div');
-      text_plat.className = "card-body card-title";
+      text_plat.className = "card-body card-title row";
 
       const title_plat = document.createElement('p');
       title_plat.textContent = plat.libelle;

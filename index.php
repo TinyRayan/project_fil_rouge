@@ -41,12 +41,12 @@
 
 <h3 class="justify-content-center d-flex mb-4">Quelques Catégories</h3>
 <!--Catégories-->
-<div id="catindex" class="row m-0"></div>
+<div id="catindex" class="row "></div>
 
 
 <h3 class="justify-content-center d-flex mt-3">Quelques Plats</h3>
 <!--Plats-->
-<div id="platindex" class="row m-0"></div>
+<div id="platindex" class="row mb-5 "></div>
 
 
 
