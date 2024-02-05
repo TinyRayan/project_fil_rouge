@@ -5,8 +5,8 @@
             <ul class="list-inline mt-2 d-flex justify-content-around   ">
                 <li class="list-inline-item"><a href="index.php">Accueil</a></li>
                 <li class="list-inline-item"><a href="contact.php">Nous Contacter</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Termes</a></li>
+                <li class="list-inline-item"><a href="#">confidentialité & politique</a></li>
             </ul>
              <div class="social d-flex justify-content-evenly ">
               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">

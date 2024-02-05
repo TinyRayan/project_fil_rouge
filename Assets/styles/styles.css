@@ -47,36 +47,27 @@ body, html{
 }
 
 
-
- 
- .search-container {
-   max-width: 300px;
-  margin: 50px auto;
+.search-container {
+  max-width: 400px; /* Définir une largeur maximale pour le conteneur de recherche */
+  margin: 0 auto;   /* Centrer le conteneur de recherche sur la page */
 }
 
-
 #searchInput {
-  width: auto;
-  padding: 5px;
-  box-sizing: border-box;
+  width: 100%;      /* Prendre 100% de la largeur disponible */
+  padding: 10px;    /* Ajouter un peu de marge pour une meilleure apparence */
+  box-sizing: border-box; /* Inclure le padding dans la largeur totale */
 }
 
 #results {
- 
-  width: 50%;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
   z-index: 1;
+  width: auto; /* Ajuster la largeur automatiquement en fonction du contenu */
+  background-color: grey;
+  padding: 0;
+  width: 400px;
+ 
+}
 
-}  
-  
-
-  
   /*----------------------Code Main---------------------------*/
  h1, h3, h5{
     color: rgb(230, 148, 27);

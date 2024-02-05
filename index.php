@@ -32,7 +32,7 @@
 
   <input type="text" id="searchInput"  placeholder="Rechercher...">
 
-  <ul id="results"></ul>
+  <ul id="results" class="row"></ul>
 
 </div>
 

@@ -77,6 +77,33 @@
     "active": "Yes"
    },
    {
+    "id_plat": 17,
+    "libelle": "Tacos",
+    "description":"Explorez l'exquise simplicité de nos French Tacos, une fusion créative entre la tradition mexicaine et le style français.  le plaisir de déguster des tacos chez nous.",
+    "prix": 11,
+    "image": "Assets/images_the_district/food/tacos.jpg",
+    "id_categorie": 11,
+    "active": "Yes"
+   },
+   {
+    "id_plat": 19,
+    "libelle": "Sushi",
+    "description":"Découvrez l'art de la délicatesse avec nos sushis exceptionnels. Des créations exquises où la fraîcheur des poissons rencontre la maîtrise de la cuisine japonaise. Chaque bouchée est une danse de saveurs.",
+    "prix": 13,
+    "image": "Assets/images_the_district/food/sushi.jpg",
+    "id_categorie": 12,
+    "active": "Yes"
+   },
+   {
+    "id_plat": 18,
+    "libelle": "Sandwich au Poulet",
+    "description":" Baignez vos papilles dans l'harmonie délicate de notre sandwich au poulet. Des morceaux de poulet grillé avec soin, mariés à des ingrédients français raffinés.",
+    "prix": 10,
+    "image": "Assets/images_the_district/food/sandwich_poulet.png",
+    "id_categorie": 11,
+    "active": "Yes"
+   },
+   {
     "id_plat": 9,
     "libelle": "Buffalo Chicken Wrap",
     "description": "Du bon filet de poulet legerment grillé mariné dans notre spécialité sucrée & épicée, enveloppé dans une tortilla blanche douce faite maison.",

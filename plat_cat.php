@@ -26,7 +26,7 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
   require_once('Assets/php/menu.php')
 ?>
 
-<h1 class="d-flex justify-content-center m-2" id="title"></h1>
+<div class="d-flex justify-content-center m-2" id="title"></div>
 
 
 <div id="plats" class="row"></div>
