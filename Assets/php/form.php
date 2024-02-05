@@ -13,10 +13,10 @@
     $filecontent = "Nom: $lastname\nPrénom: $firstname\nEmail: $email\nTéléphone: $phone\nDemande: $request\nHeure: $current_time\n\n";
 
     // Specify the relative path within the project directory
-    $file_path = "C:/xampp/htdocs/project_fil_rouge/contact_$current_time.txt";
+    $file_path = "/var/www/html/contact_$current_time.txt";
 
     // Save data to the file
     file_put_contents($file_path, $filecontent); 
     echo '<script>alert("Formulaire envoyé avec succès!");</script>';
-
+    
 ?>

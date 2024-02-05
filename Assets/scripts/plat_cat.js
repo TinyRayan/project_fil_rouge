@@ -10,12 +10,10 @@ $(document).ready(function () {
 
     $.get('Assets/json/data.json', function (data) {
 
-        const libellecat = data.categorie.filter(categorie => categorie.libelle == categoryId);
+        
         
         const plats = data.plat.filter(plat => plat.id_categorie == categoryId);
- const title_page= document.createElement('h1');
-           title_page.textContent = libellecat
-           console.log(title_page)
+
         plats.forEach(plat => {
             
            

@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   $.get('Assets/json/data.json', function (data) {
 
-    const catindex = $('#catindex')
+    const catindex = $('#catindex')  //Get the id of the html file to create elements
     for (i = 0; i < 6; i++) {
       const elem = document.createElement('div')
       elem.className = 'col-12 col-md-6 col-lg-4 p-0 d-flex justify-content-center p-0 m-0'
@@ -14,19 +14,19 @@ $(document).ready(function () {
 
 
 
-      const img = document.createElement('img')
+      const img = document.createElement('img') 
       img.src = data.categorie[i].image
       img.className = 'img-thumbnail  mt-3 image-hover-effect'
 
 
 
 
-      const lien = document.createElement('a')
+      const lien = document.createElement('a') //retrieves the id to be able to display the dishes in relation to the clicked link
       lien.href = "plat_cat.php?id=" + data.categorie[i].id_categorie
       lien.className = 'image-container'
 
 
-      const p = document.createElement('p')
+      const p = document.createElement('p') //retrieves the label to be able to display the dishes in relation to the clicked link
       p.className = 'image-text'
       p.textContent = data.categorie[i].libelle
 

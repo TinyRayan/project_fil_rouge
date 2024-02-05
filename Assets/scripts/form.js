@@ -5,42 +5,47 @@ $(document).ready(function () {
 
     event.preventDefault();
 
+    // Last Name Check
     const lastname = document.querySelector("#lastname");
     const error_lastname = document.querySelector("#error_lastname");
 
-    if ($(lastname).val().trim() === "") {
-      $(error_lastname).html("<p class=error>Entrez un nom valide.</p>");
+    if ($(lastname).val().trim() === ""||!isValidLastName($(lastname).val())) {
+      $(error_lastname).html("<p class=error>Entrez un nom valide Uniquement des lettres.</p>");
+    return;
     } else {
       $(error_lastname).html("");
     }
-
+// Fisrt Name Check
     const firstname = document.querySelector("#firstname");
     const error_firstname = document.querySelector("#error_firstname");
 
-    if ($(firstname).val().trim() === "") {
-      $(error_firstname).html("<p class=error>Entrez un prénom valide.</p>");
+    if ($(firstname).val().trim() === ""||!isValidFirstName($(firstname).val())) {
+      $(error_firstname).html("<p class=error>Entrez un prénom valide Uniquement des lettres.</p>");
+    return;
     } else {
       $(error_firstname).html("");
     }
-
+// Email Check
     const email = document.querySelector("#email");
     const error_email = document.querySelector("#error_email");
 
     if ($(email).val().trim() === "" || !isValidEmail($(email).val())) {
       $(error_email).html("<p class=error>Veuillez saisir une adresse mail valide.</p>")
+    return;
     } else {
       $(error_email).html("");
     }
-
+// Phone Check
     const phone = document.querySelector("#phone");
     const error_phone = document.querySelector("#error_phone");
 
     if ($(phone).val().trim() === "" || !isValidPhoneNumber($(phone).val())) {
       $(error_phone).html("<p class=error>Veuillez saisir téléphone valide (10chiffres).</p>")
+    return;
     } else {
       $(error_phone).html("");
     }
-
+// Request Check
     const request = document.querySelector("#demande");
     const error_request = document.querySelector("#error_request");
 
@@ -53,12 +58,25 @@ $(document).ready(function () {
 
     $(this).unbind('submit').submit();
 
-
+    this.reset();
 
 
 
 
   });
+
+// Function Check to input
+
+  function isValidLastName(lastname) {
+    return /^[a-zA-Z]+$/.test(lastname);
+  }
+
+
+  function isValidFirstName(firstname) {
+    return /^[a-zA-Z]+$/.test(firstname);
+  }
+
+
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -69,18 +87,9 @@ $(document).ready(function () {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
   //--FORM VALIDATE COMMANDE & CARD COMMANDE---//
+
+// Take the Id in the Url 
 
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -89,12 +98,16 @@ $(document).ready(function () {
   console.log(platId);
 
   const platDetail = $('#commande');
-
+  const libelle_plat = $('#libelle_plat');
+// Get data from Json File
   $.get('Assets/json/data.json', function (data) {
     const plat = data.plat.find(plat => plat.id_plat == platId);
 
+    const t_plat = document.createElement('h3')
+    t_plat.textContent=plat.libelle
+    libelle_plat.append(t_plat)
     const elem_plat = document.createElement('div');
-    elem_plat.className = "card col-12 col-md-8 mx-auto ";
+    elem_plat.className = "card col-8 mx-auto mt-4";
 
     const img_plat = document.createElement('img');
     img_plat.src = plat.image;
@@ -118,7 +131,7 @@ $(document).ready(function () {
 
   });
 
-
+// Validate Order Form
   $("#Form_commande_Validate").submit(function (event) {
     event.preventDefault();
 
@@ -131,6 +144,7 @@ $(document).ready(function () {
 
     if ($(lastname).val().trim() === "") {
       $(error_lastname).html("<p class=error>Entrez un nom valide.</p>");
+    return;
     } else {
       $(error_lastname).html("");
     }
@@ -140,6 +154,7 @@ $(document).ready(function () {
 
     if ($(firstname).val().trim() === "") {
       $(error_firstname).html("<p class=error>Entrez un prénom valide.</p>");
+    return;
     } else {
       $(error_firstname).html("");
     }
@@ -152,6 +167,7 @@ $(document).ready(function () {
 
     if ($(adress).val().trim() === "") {
       $(error_adress).html("<p class=error>Veuillez entrez une Adresse Valide.</p>")
+    return;
     } else {
       $(error_adress).html("");
     }
@@ -186,82 +202,3 @@ $(document).ready(function () {
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
