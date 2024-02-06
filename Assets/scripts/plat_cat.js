@@ -4,22 +4,31 @@ $(document).ready(function () {
     const categoryId = urlParams.get('id');
     console.log(categoryId);
 
-    const title_cat_plat = $('#title');
-
+    const title_cat = $('#title');
+    const desccat_plat= $('#desc-cat')
     const plats_cat = $('#plats');
+
 
     $.get('Assets/json/data.json', function (data) {
 
+        const category = data.categorie.find(cat => cat.id_categorie == categoryId);
         
+        const libellecat = category.libelle;
+        const title_catplat = document.createElement('h3');
+        title_catplat.textContent= libellecat
+        title_cat.append(title_catplat)
         
+        const desccat=category.description
+        const pcat = document.createElement('h5');
+        pcat.textContent=desccat
+        desccat_plat.append(pcat)
+    
+
         const plats = data.plat.filter(plat => plat.id_categorie == categoryId);
 
         plats.forEach(plat => {
             
-           
-          
-           
-            
+         
             const card = document.createElement('div');
             card.className = 'card col-sm-8 col-10  ';
 

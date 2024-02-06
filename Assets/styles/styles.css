@@ -73,6 +73,15 @@ body, html{
     color: rgb(230, 148, 27);
   
   }
+
+#desc-cat{
+  background-color: #4e4545;
+  border: 1px solid #a95020d9;
+  border-radius: 10px;
+  width: auto;
+  
+  
+}
 /* ---Effect on card index categories--- */
   .image-hover-effect {
     transition: transform 0.3s ease-in-out; 
