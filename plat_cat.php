@@ -23,17 +23,19 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
   
   
 
-        <!--Navigation-->
+        <!-----Header----->
         <?php
   require_once('Assets/php/menu.php')
 ?>
+
+<!-----Main Code (plats-cat)----->
 
 <div class="d-flex justify-content-center m-2" id="title"></div>
 <div id="desc-cat" class="card"></div>
 
 <div id="plats" class="row"></div>
 
-
+<!-----Footer----->
 <?php
   require_once('Assets/php/footer.php')
 ?>

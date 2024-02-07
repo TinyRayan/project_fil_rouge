@@ -17,7 +17,7 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
 <body>
   
   
-
+<!-----Header----->
   
   <?php
   require_once('Assets/php/menu.php')
@@ -68,7 +68,7 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
   </form>
 
 
-
+<!-- Footer -->
 
   <?php
   require_once('Assets/php/footer.php')

@@ -18,7 +18,7 @@
 
   
 
-      <!-----NAVAGATION----->
+      <!-----Header----->
       <?php
   require_once('Assets/php/menu.php')
 ?>

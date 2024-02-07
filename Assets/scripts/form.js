@@ -112,6 +112,7 @@ $(document).ready(function () {
     const img_plat = document.createElement('img');
     img_plat.src = plat.image;
     img_plat.className = "img-fluid ";
+    
 
     const text_plat = document.createElement('div');
     text_plat.className = "card-body card-title row";
@@ -119,6 +120,9 @@ $(document).ready(function () {
     const title_plat = document.createElement('p');
     title_plat.textContent = plat.libelle;
 
+    const pprice = document.createElement('p');
+    pprice.textContent = plat.prix + '€';
+    pprice.className = 'col-6 card-price';
 
     const desc_plat = document.createElement('p');
     desc_plat.textContent = plat.description;
@@ -127,7 +131,8 @@ $(document).ready(function () {
 
     platDetail.append(elem_plat);
     elem_plat.append(img_plat, text_plat);
-    text_plat.append(title_plat, desc_plat);
+   
+    text_plat.append(title_plat , desc_plat,pprice);
 
   });
 
