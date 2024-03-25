@@ -20,18 +20,18 @@ $(document).ready(function () {
             list.innerHTML = '';
             plats.forEach(plat => {
 
-                const listtitle = document.createElement('a')
-                listtitle.href = "commande.php?id=" + plat.id_plat
-                listtitle.textContent = plat.libelle
+                const listTitle = document.createElement('a')
+                listTitle.href = "commande.php?id=" + plat.id_plat
+                listTitle.textContent = plat.libelle
 
 
-                const listimg = document.createElement('img')
-                listimg.className = "img-fluid"
-                listimg.src = plat.image
+                const listImg = document.createElement('img')
+                listImg.className = "img-fluid"
+                listImg.src = plat.image
 
 
-                list.append(listtitle)
-                listtitle.appendChild(listimg)
+                list.append(listTitle)
+                listtitle.appendChild(listImg)
             })
 
         })
